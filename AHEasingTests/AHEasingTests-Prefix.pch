@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'AHEasingTests' target in the 'AHEasingTests' project
-//
-
-#ifdef __OBJC__
-	#import <UIKit/UIKit.h>
-#endif

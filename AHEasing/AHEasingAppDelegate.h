@@ -8,14 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class AHEasingViewController;
-
 @interface AHEasingAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
-@property (nonatomic, retain) IBOutlet AHEasingViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIViewController *viewController;
 
 @end

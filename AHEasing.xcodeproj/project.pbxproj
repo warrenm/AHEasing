@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80521A7A1398175D007386E6 /* CAKeyframeAnimation+AHEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 80521A791398175D007386E6 /* CAKeyframeAnimation+AHEasing.m */; };
+		80521A7E1398179C007386E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80521A7D1398179C007386E6 /* QuartzCore.framework */; };
 		806EB7F0138F91A700E2D4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7EF138F91A700E2D4A7 /* UIKit.framework */; };
 		806EB7F2138F91A700E2D4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F1138F91A700E2D4A7 /* Foundation.framework */; };
 		806EB7F4138F91A700E2D4A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */; };
@@ -14,47 +16,31 @@
 		806EB7FD138F91A700E2D4A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB7FC138F91A700E2D4A7 /* main.m */; };
 		806EB800138F91A700E2D4A7 /* AHEasingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB7FF138F91A700E2D4A7 /* AHEasingAppDelegate.m */; };
 		806EB803138F91A700E2D4A7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806EB801138F91A700E2D4A7 /* MainWindow.xib */; };
-		806EB806138F91A700E2D4A7 /* AHEasingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB805138F91A700E2D4A7 /* AHEasingViewController.m */; };
-		806EB809138F91A700E2D4A7 /* AHEasingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806EB807138F91A700E2D4A7 /* AHEasingViewController.xib */; };
-		806EB810138F91A700E2D4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7EF138F91A700E2D4A7 /* UIKit.framework */; };
-		806EB811138F91A700E2D4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F1138F91A700E2D4A7 /* Foundation.framework */; };
-		806EB812138F91A700E2D4A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */; };
-		806EB81A138F91A700E2D4A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 806EB818138F91A700E2D4A7 /* InfoPlist.strings */; };
-		806EB81D138F91A700E2D4A7 /* AHEasingTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 806EB81C138F91A700E2D4A7 /* AHEasingTests.h */; };
-		806EB81F138F91A700E2D4A7 /* AHEasingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB81E138F91A700E2D4A7 /* AHEasingTests.m */; };
+		806EB806138F91A700E2D4A7 /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB805138F91A700E2D4A7 /* PlaygroundViewController.m */; };
+		806EB809138F91A700E2D4A7 /* PlaygroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806EB807138F91A700E2D4A7 /* PlaygroundView.xib */; };
+		806EB82A138F91C700E2D4A7 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 806EB828138F91C700E2D4A7 /* easing.c */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		806EB813138F91A700E2D4A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 806EB7E2138F91A700E2D4A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 806EB7EA138F91A700E2D4A7;
-			remoteInfo = AHEasing;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		80521A781398175D007386E6 /* CAKeyframeAnimation+AHEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAKeyframeAnimation+AHEasing.h"; sourceTree = "<group>"; };
+		80521A791398175D007386E6 /* CAKeyframeAnimation+AHEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAKeyframeAnimation+AHEasing.m"; sourceTree = "<group>"; };
+		80521A7D1398179C007386E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		806EB7EB138F91A700E2D4A7 /* AHEasing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHEasing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		806EB7EF138F91A700E2D4A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		806EB7F1138F91A700E2D4A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		806EB7F7138F91A700E2D4A7 /* AHEasing-Info.plist */ = {isa = PBXFileReference; path = "AHEasing-Info.plist"; sourceTree = "<group>"; };
+		806EB7F7138F91A700E2D4A7 /* AHEasing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AHEasing-Info.plist"; sourceTree = "<group>"; };
 		806EB7F9138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		806EB7FB138F91A700E2D4A7 /* AHEasing-Prefix.pch */ = {isa = PBXFileReference; path = "AHEasing-Prefix.pch"; sourceTree = "<group>"; };
+		806EB7FB138F91A700E2D4A7 /* AHEasing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AHEasing-Prefix.pch"; sourceTree = "<group>"; };
 		806EB7FC138F91A700E2D4A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		806EB7FE138F91A700E2D4A7 /* AHEasingAppDelegate.h */ = {isa = PBXFileReference; path = AHEasingAppDelegate.h; sourceTree = "<group>"; };
+		806EB7FE138F91A700E2D4A7 /* AHEasingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHEasingAppDelegate.h; sourceTree = "<group>"; };
 		806EB7FF138F91A700E2D4A7 /* AHEasingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHEasingAppDelegate.m; sourceTree = "<group>"; };
 		806EB802138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		806EB804138F91A700E2D4A7 /* AHEasingViewController.h */ = {isa = PBXFileReference; path = AHEasingViewController.h; sourceTree = "<group>"; };
-		806EB805138F91A700E2D4A7 /* AHEasingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHEasingViewController.m; sourceTree = "<group>"; };
-		806EB808138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AHEasingViewController.xib; sourceTree = "<group>"; };
-		806EB80F138F91A700E2D4A7 /* AHEasingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHEasingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		806EB817138F91A700E2D4A7 /* AHEasingTests-Info.plist */ = {isa = PBXFileReference; path = "AHEasingTests-Info.plist"; sourceTree = "<group>"; };
-		806EB819138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		806EB81B138F91A700E2D4A7 /* AHEasingTests-Prefix.pch */ = {isa = PBXFileReference; path = "AHEasingTests-Prefix.pch"; sourceTree = "<group>"; };
-		806EB81C138F91A700E2D4A7 /* AHEasingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHEasingTests.h; sourceTree = "<group>"; };
-		806EB81E138F91A700E2D4A7 /* AHEasingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHEasingTests.m; sourceTree = "<group>"; };
+		806EB804138F91A700E2D4A7 /* PlaygroundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaygroundViewController.h; sourceTree = "<group>"; };
+		806EB805138F91A700E2D4A7 /* PlaygroundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaygroundViewController.m; sourceTree = "<group>"; };
+		806EB808138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PlaygroundView.xib; sourceTree = "<group>"; };
+		806EB828138F91C700E2D4A7 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
+		806EB829138F91C700E2D4A7 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,30 +48,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80521A7E1398179C007386E6 /* QuartzCore.framework in Frameworks */,
 				806EB7F0138F91A700E2D4A7 /* UIKit.framework in Frameworks */,
 				806EB7F2138F91A700E2D4A7 /* Foundation.framework in Frameworks */,
 				806EB7F4138F91A700E2D4A7 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		806EB80B138F91A700E2D4A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				806EB810138F91A700E2D4A7 /* UIKit.framework in Frameworks */,
-				806EB811138F91A700E2D4A7 /* Foundation.framework in Frameworks */,
-				806EB812138F91A700E2D4A7 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80521A7F13982633007386E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				806EB801138F91A700E2D4A7 /* MainWindow.xib */,
+				806EB807138F91A700E2D4A7 /* PlaygroundView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		80521A801398263A007386E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				806EB7FE138F91A700E2D4A7 /* AHEasingAppDelegate.h */,
+				806EB7FF138F91A700E2D4A7 /* AHEasingAppDelegate.m */,
+				806EB804138F91A700E2D4A7 /* PlaygroundViewController.h */,
+				806EB805138F91A700E2D4A7 /* PlaygroundViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		80521A8113982642007386E6 /* Other Source */ = {
+			isa = PBXGroup;
+			children = (
+				806EB7FB138F91A700E2D4A7 /* AHEasing-Prefix.pch */,
+				806EB7FC138F91A700E2D4A7 /* main.m */,
+			);
+			name = "Other Source";
+			sourceTree = "<group>";
+		};
+		80521A821398268A007386E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				806EB7F7138F91A700E2D4A7 /* AHEasing-Info.plist */,
+				806EB7F8138F91A700E2D4A7 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		80521A83139826A8007386E6 /* Easing */ = {
+			isa = PBXGroup;
+			children = (
+				80521A781398175D007386E6 /* CAKeyframeAnimation+AHEasing.h */,
+				80521A791398175D007386E6 /* CAKeyframeAnimation+AHEasing.m */,
+				806EB829138F91C700E2D4A7 /* easing.h */,
+				806EB828138F91C700E2D4A7 /* easing.c */,
+			);
+			name = Easing;
+			sourceTree = "<group>";
+		};
 		806EB7E0138F91A700E2D4A7 = {
 			isa = PBXGroup;
 			children = (
 				806EB7F5138F91A700E2D4A7 /* AHEasing */,
-				806EB815138F91A700E2D4A7 /* AHEasingTests */,
 				806EB7EE138F91A700E2D4A7 /* Frameworks */,
 				806EB7EC138F91A700E2D4A7 /* Products */,
 			);
@@ -95,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				806EB7EB138F91A700E2D4A7 /* AHEasing.app */,
-				806EB80F138F91A700E2D4A7 /* AHEasingTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +130,7 @@
 				806EB7EF138F91A700E2D4A7 /* UIKit.framework */,
 				806EB7F1138F91A700E2D4A7 /* Foundation.framework */,
 				806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */,
+				80521A7D1398179C007386E6 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,12 +138,11 @@
 		806EB7F5138F91A700E2D4A7 /* AHEasing */ = {
 			isa = PBXGroup;
 			children = (
-				806EB7FE138F91A700E2D4A7 /* AHEasingAppDelegate.h */,
-				806EB7FF138F91A700E2D4A7 /* AHEasingAppDelegate.m */,
-				806EB801138F91A700E2D4A7 /* MainWindow.xib */,
-				806EB804138F91A700E2D4A7 /* AHEasingViewController.h */,
-				806EB805138F91A700E2D4A7 /* AHEasingViewController.m */,
-				806EB807138F91A700E2D4A7 /* AHEasingViewController.xib */,
+				80521A801398263A007386E6 /* Controller */,
+				80521A7F13982633007386E6 /* View */,
+				80521A83139826A8007386E6 /* Easing */,
+				80521A8113982642007386E6 /* Other Source */,
+				80521A821398268A007386E6 /* Resources */,
 				806EB7F6138F91A700E2D4A7 /* Supporting Files */,
 			);
 			path = AHEasing;
@@ -127,30 +151,6 @@
 		806EB7F6138F91A700E2D4A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				806EB7F7138F91A700E2D4A7 /* AHEasing-Info.plist */,
-				806EB7F8138F91A700E2D4A7 /* InfoPlist.strings */,
-				806EB7FB138F91A700E2D4A7 /* AHEasing-Prefix.pch */,
-				806EB7FC138F91A700E2D4A7 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		806EB815138F91A700E2D4A7 /* AHEasingTests */ = {
-			isa = PBXGroup;
-			children = (
-				806EB81C138F91A700E2D4A7 /* AHEasingTests.h */,
-				806EB81E138F91A700E2D4A7 /* AHEasingTests.m */,
-				806EB816138F91A700E2D4A7 /* Supporting Files */,
-			);
-			path = AHEasingTests;
-			sourceTree = "<group>";
-		};
-		806EB816138F91A700E2D4A7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				806EB817138F91A700E2D4A7 /* AHEasingTests-Info.plist */,
-				806EB818138F91A700E2D4A7 /* InfoPlist.strings */,
-				806EB81B138F91A700E2D4A7 /* AHEasingTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,25 +175,6 @@
 			productReference = 806EB7EB138F91A700E2D4A7 /* AHEasing.app */;
 			productType = "com.apple.product-type.application";
 		};
-		806EB80E138F91A700E2D4A7 /* AHEasingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 806EB825138F91A700E2D4A7 /* Build configuration list for PBXNativeTarget "AHEasingTests" */;
-			buildPhases = (
-				806EB80A138F91A700E2D4A7 /* Sources */,
-				806EB80B138F91A700E2D4A7 /* Frameworks */,
-				806EB80C138F91A700E2D4A7 /* Resources */,
-				806EB80D138F91A700E2D4A7 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				806EB814138F91A700E2D4A7 /* PBXTargetDependency */,
-			);
-			name = AHEasingTests;
-			productName = AHEasingTests;
-			productReference = 806EB80F138F91A700E2D4A7 /* AHEasingTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,7 +196,6 @@
 			projectRoot = "";
 			targets = (
 				806EB7EA138F91A700E2D4A7 /* AHEasing */,
-				806EB80E138F91A700E2D4A7 /* AHEasingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,36 +207,11 @@
 			files = (
 				806EB7FA138F91A700E2D4A7 /* InfoPlist.strings in Resources */,
 				806EB803138F91A700E2D4A7 /* MainWindow.xib in Resources */,
-				806EB809138F91A700E2D4A7 /* AHEasingViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		806EB80C138F91A700E2D4A7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				806EB81A138F91A700E2D4A7 /* InfoPlist.strings in Resources */,
-				806EB81D138F91A700E2D4A7 /* AHEasingTests.h in Resources */,
+				806EB809138F91A700E2D4A7 /* PlaygroundView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		806EB80D138F91A700E2D4A7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		806EB7E7138F91A700E2D4A7 /* Sources */ = {
@@ -265,27 +220,13 @@
 			files = (
 				806EB7FD138F91A700E2D4A7 /* main.m in Sources */,
 				806EB800138F91A700E2D4A7 /* AHEasingAppDelegate.m in Sources */,
-				806EB806138F91A700E2D4A7 /* AHEasingViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		806EB80A138F91A700E2D4A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				806EB81F138F91A700E2D4A7 /* AHEasingTests.m in Sources */,
+				806EB806138F91A700E2D4A7 /* PlaygroundViewController.m in Sources */,
+				806EB82A138F91C700E2D4A7 /* easing.c in Sources */,
+				80521A7A1398175D007386E6 /* CAKeyframeAnimation+AHEasing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		806EB814138F91A700E2D4A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 806EB7EA138F91A700E2D4A7 /* AHEasing */;
-			targetProxy = 806EB813138F91A700E2D4A7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		806EB7F8138F91A700E2D4A7 /* InfoPlist.strings */ = {
@@ -304,20 +245,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		806EB807138F91A700E2D4A7 /* AHEasingViewController.xib */ = {
+		806EB807138F91A700E2D4A7 /* PlaygroundView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				806EB808138F91A700E2D4A7 /* en */,
 			);
-			name = AHEasingViewController.xib;
-			sourceTree = "<group>";
-		};
-		806EB818138F91A700E2D4A7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				806EB819138F91A700E2D4A7 /* en */,
-			);
-			name = InfoPlist.strings;
+			name = PlaygroundView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -335,7 +268,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -349,7 +282,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -383,50 +316,6 @@
 			};
 			name = Release;
 		};
-		806EB826138F91A700E2D4A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AHEasing.app/AHEasing";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHEasingTests/AHEasingTests-Prefix.pch";
-				INFOPLIST_FILE = "AHEasingTests/AHEasingTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		806EB827138F91A700E2D4A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AHEasing.app/AHEasing";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHEasingTests/AHEasingTests-Prefix.pch";
-				INFOPLIST_FILE = "AHEasingTests/AHEasingTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -446,14 +335,7 @@
 				806EB824138F91A700E2D4A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		806EB825138F91A700E2D4A7 /* Build configuration list for PBXNativeTarget "AHEasingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				806EB826138F91A700E2D4A7 /* Debug */,
-				806EB827138F91A700E2D4A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
