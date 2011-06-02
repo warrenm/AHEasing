@@ -164,13 +164,13 @@ AHFloat SineEaseInOut(AHFloat p)
 }
 
 // Modeled after shifted quadrant IV of unit circle
-AHFloat CircleEaseIn(AHFloat p)
+AHFloat CircularEaseIn(AHFloat p)
 {
 	return 1 - sqrt(1 - (p * p));
 }
 
 // Modeled after shifted quadrant II of unit circle
-AHFloat CircleEaseOut(AHFloat p)
+AHFloat CircularEaseOut(AHFloat p)
 {
 	return sqrt((2 - p) * p);
 }
@@ -178,7 +178,7 @@ AHFloat CircleEaseOut(AHFloat p)
 // Modeled after the piecewise circular function
 // y = (1/2)(1 - sqrt(1 - 4x^2))           ; [0, 0.5)
 // y = (1/2)(sqrt(-(2x - 3)*(2x - 1)) + 1) ; [0.5, 1]
-AHFloat CircleEaseInOut(AHFloat p)
+AHFloat CircularEaseInOut(AHFloat p)
 {
 	if(p < 0.5)
 	{
