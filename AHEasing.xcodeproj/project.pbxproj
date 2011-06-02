@@ -143,16 +143,8 @@
 				80521A83139826A8007386E6 /* Easing */,
 				80521A8113982642007386E6 /* Other Source */,
 				80521A821398268A007386E6 /* Resources */,
-				806EB7F6138F91A700E2D4A7 /* Supporting Files */,
 			);
 			path = AHEasing;
-			sourceTree = "<group>";
-		};
-		806EB7F6138F91A700E2D4A7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
