@@ -3,7 +3,8 @@ AHEasing
 A supplemental library of easing functions for C, C++, and Objective-C
 --------
 
-The useful portion of this projects consists of two parts:
+The useful portion of this project consists of two parts:
+
 1. An easing function library, implemented in C
 2. CAAnimation category methods to more easily use easing in your Core Animation projects
 
@@ -11,6 +12,7 @@ Supported functions
 --------
 
 The following types of easing functions are planned to be supported:
+
 * Linear
 * Quadratic
 * Cubic
@@ -28,7 +30,8 @@ Goals
 --------
 	
 The design goals of AHEasing are:
-* To be as fast as conceivably possible while maintianing human readability
+
+* To be as fast as conceivably possible while maintaining human readability
 * To be portable to any system with a C runtime
 * To elucidate the mathematical underpinnings of common easing functions
 
@@ -36,6 +39,7 @@ Inspiration
 --------
 
 This work is a spiritual descendent (not to say derivative work) of works done by the following individuals:
+
 * Robert Penner (http://www.robertpenner.com/easing/)
 * George McGinley Smith (http://gsgd.co.uk/sandbox/jquery/easing/)
 * James Padolsey (http://james.padolsey.com/demos/jquery/easing/)
