@@ -15,12 +15,12 @@
 #import "CAKeyframeAnimation+AHEasing.h"
 
 @implementation PlaygroundViewController
-@synthesize boid, tapView, curveSegmentedControl, easingSegmentedControl;
+@synthesize boid, graphView, curveSegmentedControl, easingSegmentedControl;
 
 - (void)dealloc
 {
 	[boid release];
-	[tapView release];
+	[graphView release];
 	[curveSegmentedControl release];
 	[easingSegmentedControl release];
 
@@ -41,7 +41,7 @@
 	currentFunction = LinearInterpolation;
 	
 	UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewWasTapped:)];
-	[self.tapView addGestureRecognizer:tapRecognizer];
+	[self.graphView addGestureRecognizer:tapRecognizer];
 	[tapRecognizer release];
 }
 
@@ -123,6 +123,9 @@
 			currentFunction = (currentEasing == EaseIn) ? ElasticEaseIn : (currentEasing == EaseOut) ? ElasticEaseOut : ElasticEaseOut;
 			break;
 	}
+	
+	[graphView setEasingFunction:currentFunction];
+	[graphView setNeedsDisplay];
 }
 
 - (IBAction)curveSelectionChanged:(id)sender

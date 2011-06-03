@@ -19,6 +19,9 @@
 		806EB806138F91A700E2D4A7 /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB805138F91A700E2D4A7 /* PlaygroundViewController.m */; };
 		806EB809138F91A700E2D4A7 /* PlaygroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806EB807138F91A700E2D4A7 /* PlaygroundView.xib */; };
 		806EB82A138F91C700E2D4A7 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 806EB828138F91C700E2D4A7 /* easing.c */; };
+		80913CD41399414800FE19D5 /* EasingFunctionGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80913CD31399414800FE19D5 /* EasingFunctionGraphView.m */; };
+		80913CD7139960F100FE19D5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80913CD5139960F100FE19D5 /* Icon.png */; };
+		80913CD8139960F100FE19D5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80913CD6139960F100FE19D5 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,10 @@
 		806EB808138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PlaygroundView.xib; sourceTree = "<group>"; };
 		806EB828138F91C700E2D4A7 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		806EB829138F91C700E2D4A7 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
+		80913CD21399414800FE19D5 /* EasingFunctionGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasingFunctionGraphView.h; sourceTree = "<group>"; };
+		80913CD31399414800FE19D5 /* EasingFunctionGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasingFunctionGraphView.m; sourceTree = "<group>"; };
+		80913CD5139960F100FE19D5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		80913CD6139960F100FE19D5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,8 @@
 			children = (
 				806EB801138F91A700E2D4A7 /* MainWindow.xib */,
 				806EB807138F91A700E2D4A7 /* PlaygroundView.xib */,
+				80913CD21399414800FE19D5 /* EasingFunctionGraphView.h */,
+				80913CD31399414800FE19D5 /* EasingFunctionGraphView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -90,6 +99,8 @@
 		80521A821398268A007386E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				80913CD5139960F100FE19D5 /* Icon.png */,
+				80913CD6139960F100FE19D5 /* Icon@2x.png */,
 				806EB7F7138F91A700E2D4A7 /* AHEasing-Info.plist */,
 				806EB7F8138F91A700E2D4A7 /* InfoPlist.strings */,
 			);
@@ -200,6 +211,8 @@
 				806EB7FA138F91A700E2D4A7 /* InfoPlist.strings in Resources */,
 				806EB803138F91A700E2D4A7 /* MainWindow.xib in Resources */,
 				806EB809138F91A700E2D4A7 /* PlaygroundView.xib in Resources */,
+				80913CD7139960F100FE19D5 /* Icon.png in Resources */,
+				80913CD8139960F100FE19D5 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +228,7 @@
 				806EB806138F91A700E2D4A7 /* PlaygroundViewController.m in Sources */,
 				806EB82A138F91C700E2D4A7 /* easing.c in Sources */,
 				80521A7A1398175D007386E6 /* CAKeyframeAnimation+AHEasing.m in Sources */,
+				80913CD41399414800FE19D5 /* EasingFunctionGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -261,6 +276,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -269,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -276,6 +293,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

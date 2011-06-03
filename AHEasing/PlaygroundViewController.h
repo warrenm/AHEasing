@@ -12,6 +12,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "CAKeyframeAnimation+AHEasing.h"
+#import "EasingFunctionGraphView.h"
 
 enum CurveType
 {
@@ -41,7 +42,8 @@ enum EasingMode
 	AHEasingFunction currentFunction;
 }
 
-@property(nonatomic, retain) IBOutlet UIView *boid, *tapView;
+@property(nonatomic, retain) IBOutlet UIView *boid;
+@property(nonatomic, retain) IBOutlet EasingFunctionGraphView *graphView;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *curveSegmentedControl;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *easingSegmentedControl;
 
