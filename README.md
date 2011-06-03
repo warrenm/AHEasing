@@ -3,7 +3,7 @@ AHEasing
 A supplemental library of easing functions for C, C++, and Objective-C
 --------
 
-The useful portion of this projects consists of two parts:
+The useful portion of this project consists of two parts:
 
 1. An easing function library, implemented in C
 2. CAAnimation category methods to more easily use easing in your Core Animation projects
