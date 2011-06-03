@@ -62,7 +62,7 @@ AHFloat ExponentialEaseInOut(AHFloat p);
 // Exponentially-damped sine wave easing
 AHFloat ElasticEaseIn(AHFloat p);
 AHFloat ElasticEaseOut(AHFloat p);
-//AHFloat ElasticEaseInOut(AHFloat p);
+AHFloat ElasticEaseInOut(AHFloat p);
 
 // Overshooting cubic easing
 //AHFloat BackEaseIn(AHFloat p);

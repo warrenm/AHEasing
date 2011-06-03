@@ -120,7 +120,7 @@
 			currentFunction = (currentEasing == EaseIn) ? ExponentialEaseIn : (currentEasing == EaseOut) ? ExponentialEaseOut : ExponentialEaseInOut;
 			break;
 		case CurveTypeElastic:
-			currentFunction = (currentEasing == EaseIn) ? ElasticEaseIn : (currentEasing == EaseOut) ? ElasticEaseOut : ElasticEaseOut;
+			currentFunction = (currentEasing == EaseIn) ? ElasticEaseIn : (currentEasing == EaseOut) ? ElasticEaseOut : ElasticEaseInOut;
 			break;
 	}
 	

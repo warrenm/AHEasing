@@ -44,9 +44,6 @@ AHFloat QuadraticEaseInOut(AHFloat p)
 	{
 		return (-2 * p * p) + (4 * p) - 1;
 	}
-	
-	// Visualize with Wolfram:
-	// plot Piecewise[{{y = (1/2)((2x)^2),0<=x<=0.5},{y=-(1/2)((2x-1)*(2x-3)-1),0.5<x<=1.0}}]
 }
 
 // Modeled after the cubic y = x^3
@@ -76,9 +73,6 @@ AHFloat CubicEaseInOut(AHFloat p)
 		AHFloat f = ((2 * p) - 2);
 		return 0.5 * f * f * f + 1;
 	}
-	
-	// Visualize with Wolfram:
-	// plot Piecewise[{{y=(1/2)((2x)^3),0<=x<=0.5},{y=(1/2)((2x-2)^3+2),0.5<=x<=1}}]
 }
 
 // Modeled after the quartic x^4
@@ -108,9 +102,6 @@ AHFloat QuarticEaseInOut(AHFloat p)
 		AHFloat f = (p - 1);
 		return -8 * f * f * f * f + 1;
 	}
-	
-	// Visualize with Wolfram:
-	// plot Piecewise[{{y=(1/2)((2x)^4),0<=x<=0.5},{y=-(1/2)((2x-2)^4-2),0.5<=x<=1}}]
 }
 
 // Modeled after the quintic y = x^5
@@ -140,9 +131,6 @@ AHFloat QuinticEaseInOut(AHFloat p)
 		AHFloat f = ((2 * p) - 2);
 		return  0.5 * f * f * f * f * f + 1;
 	}
-	
-	// Visualize with Wolfram:
-	// plot Piecewise[{{(1/2)((2x)^5),0<=x<0.5},{(1/2)((2x-2)^5+2),0.5<=x<=1}}]
 }
 
 // Modeled after quarter-cycle of sine wave
@@ -188,9 +176,6 @@ AHFloat CircularEaseInOut(AHFloat p)
 	{
 		return 0.5 * (sqrt(-((2 * p) - 3) * ((2 * p) - 1)) + 1);
 	}
-	
-	// Visualize with Wolfram:
-	// plot Piecewise[{{y=(1/2)(1-sqrt(1-4x^2)),0<=x<=0.5},{y=(1/2)(sqrt(-(2x-3)*(2x-1))+1),0.5<=x<=1}}]
 }
 
 // Modeled after the exponential function y = 2^(10(x - 1))
@@ -220,26 +205,33 @@ AHFloat ExponentialEaseInOut(AHFloat p)
 	{
 		return -0.5 * pow(2, (-20 * p) + 10) + 1;
 	}
-	
-	// Visualize with Wolfram:
-	// plot Piecewise[{{y=(1/2)2^(10(2x-1)),0<=x<=0.5},{y=-(1/2)*2^(-10(2x-1)))+1,0.5<=x<=1}}]
 }
 
-// Modeled by damped sine wave y = sin(13pi/2*x)*pow(2, 10 * (x - 1))
+// Modeled after the damped sine wave y = sin(13pi/2*x)*pow(2, 10 * (x - 1))
 AHFloat ElasticEaseIn(AHFloat p)
 {
 	return sin(13 * M_PI_2 * p) * pow(2, 10 * (p - 1));
 }
 
-// Modeled by damped sine wave y = sin(-13pi/2*(x + 1))*pow(2, -10x) + 1
+// Modeled after the damped sine wave y = sin(-13pi/2*(x + 1))*pow(2, -10x) + 1
 AHFloat ElasticEaseOut(AHFloat p)
 {
 	return sin(-13 * M_PI_2 * (p + 1)) * pow(2, -10 * p) + 1;
 }
 
+// Modeled after the piecewise exponentially-damped sine wave:
+// y = (1/2)*sin(13pi/2*(2*x))*pow(2, 10 * ((2*x) - 1))      ; [0,0.5)
+// y = (1/2)*(sin(-13pi/2*((2x-1)+1))*pow(2,-10(2*x-1)) + 2) ; [0.5, 1]
 AHFloat ElasticEaseInOut(AHFloat p)
 {
-	return p;
+	if(p < 0.5)
+	{
+		return 0.5 * sin(13 * M_PI_2 * (2 * p)) * pow(2, 10 * ((2 * p) - 1));
+	}
+	else
+	{
+		return 0.5 * (sin(-13 * M_PI_2 * ((2 * p - 1) + 1)) * pow(2, -10 * (2 * p - 1)) + 2);
+	}
 }
 
 AHFloat BackEaseIn(AHFloat p)
