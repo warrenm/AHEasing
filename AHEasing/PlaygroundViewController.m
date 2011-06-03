@@ -122,6 +122,8 @@
 		case CurveTypeElastic:
 			currentFunction = (currentEasing == EaseIn) ? ElasticEaseIn : (currentEasing == EaseOut) ? ElasticEaseOut : ElasticEaseInOut;
 			break;
+		case CurveTypeBack:
+			currentFunction = (currentEasing == EaseIn) ? BackEaseIn : (currentEasing == EaseOut) ? BackEaseOut : BackEaseInOut;
 	}
 	
 	[graphView setEasingFunction:currentFunction];
