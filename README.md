@@ -5,7 +5,7 @@ A supplemental library of easing functions for C, C++, and Objective-C
 
 The useful portion of this project consists of two parts:
 
-1. An easing function library, implemented in C
+1. A stand-alone easing function library, implemented in C (easing.h/easing.c)
 2. CAAnimation category methods to more easily use easing in your Core Animation projects
 
 Supported functions
@@ -20,9 +20,9 @@ The following types of easing functions are planned to be supported:
 * Quintic
 * Sine
 * Circular
-* Elastic (in progress)
-* Bounce (NYI)
-* Back (NYI)
+* Elastic
+* Bounce
+* Back
 
 Each of these has corresponding ease-in, ease-out, and ease-in-out variants. The core easing functions are implemented as C functions that take a time parameter and return a progress parameter, which can subsequently be used to interpolate any quantity.
 
