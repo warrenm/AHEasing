@@ -234,19 +234,22 @@ AHFloat ElasticEaseInOut(AHFloat p)
 	}
 }
 
-// Modeled after the overshooting cubic y = x^3 - x*sin(x*pi)
+// Modeled after the overshooting cubic y = x^3-x*sin(x*pi)
 AHFloat BackEaseIn(AHFloat p)
 {
 	return p * p * p - p * sin(p * M_PI);
 }
 
-// Modeled after overshooting cubic y = 1 - ((1-x)^3 - (1-x)*sin((1-x)*pi))
+// Modeled after overshooting cubic y = 1-((1-x)^3-(1-x)*sin((1-x)*pi))
 AHFloat BackEaseOut(AHFloat p)
 {
 	AHFloat f = (1 - p);
 	return 1 - (f * f * f - f * sin(f * M_PI));
 }
 
+// Modeled after the piecewise overshooting cubic function:
+// y = (1/2)*((2x)^3-(2x)*sin(2*x*pi))           ; [0, 0.5)
+// y = (1/2)*(1-((1-x)^3-(1-x)*sin((1-x)*pi))+1) ; [0.5, 1]
 AHFloat BackEaseInOut(AHFloat p)
 {
 	if(p < 0.5)
@@ -256,22 +259,44 @@ AHFloat BackEaseInOut(AHFloat p)
 	}
 	else
 	{
-		AHFloat f = (1 - (2 * p - 1));
+		AHFloat f = (1 - (2*p - 1));
 		return 0.5 * (1 - (f * f * f - f * sin(f * M_PI))) + 0.5;
 	}
 }
 
 AHFloat BounceEaseIn(AHFloat p)
 {
-	return p;
+	return 1 - BounceEaseOut(1 - p);
 }
 
 AHFloat BounceEaseOut(AHFloat p)
 {
-	return p;
+	if(p < 4/11.0)
+	{
+		return (121 * p * p)/16.0;
+	}
+	else if(p < 8/11.0)
+	{
+		return (363/40.0 * p * p) - (99/10.0 * p) + 17/5.0;
+	}
+	else if(p < 9/10.0)
+	{
+		return (4356/361.0 * p * p) - (35442/1805.0 * p) + 16061/1805.0;
+	}
+	else
+	{
+		return (54/5.0 * p * p) - (513/25.0 * p) + 268/25.0;
+	}
 }
 
 AHFloat BounceEaseInOut(AHFloat p)
 {
-	return p;
+	if(p < 0.5)
+	{
+		return 0.5 * BounceEaseIn(p*2);
+	}
+	else
+	{
+		return 0.5 * BounceEaseOut(p * 2 - 1) + 0.5;
+	}
 }

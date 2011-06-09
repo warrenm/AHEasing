@@ -70,8 +70,8 @@ AHFloat BackEaseOut(AHFloat p);
 AHFloat BackEaseInOut(AHFloat p);
 
 // Exponentially-decaying bounce easing
-//AHFloat BounceEaseIn(AHFloat p);
-//AHFloat BounceEaseOut(AHFloat p);
-//AHFloat BounceEaseInOut(AHFloat p);
+AHFloat BounceEaseIn(AHFloat p);
+AHFloat BounceEaseOut(AHFloat p);
+AHFloat BounceEaseInOut(AHFloat p);
 
 #endif
