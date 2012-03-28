@@ -12,18 +12,22 @@
 
 #import "CAKeyframeAnimation+AHEasing.h"
 
+#if !defined(AHEasingDefaultKeyframeCount)
+
 // The larger this number, the smoother the animation
-#define AHEasingKeyframeCount 60
+#define AHEasingDefaultKeyframeCount 60
+
+#endif
 
 @implementation CAKeyframeAnimation (AHEasing)
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue keyframeCount:(size_t)keyframeCount
 {
-	NSMutableArray *values = [NSMutableArray arrayWithCapacity:AHEasingKeyframeCount];
+	NSMutableArray *values = [NSMutableArray arrayWithCapacity:keyframeCount];
 	
 	CGFloat t = 0.0;
-	CGFloat dt = 1.0 / (AHEasingKeyframeCount - 1);
-	for(size_t frame = 0; frame < AHEasingKeyframeCount; ++frame, t += dt)
+	CGFloat dt = 1.0 / (keyframeCount - 1);
+	for(size_t frame = 0; frame < keyframeCount; ++frame, t += dt)
 	{
 		CGFloat value = fromValue + function(t) * (toValue - fromValue);
 		[values addObject:[NSNumber numberWithFloat:value]];
@@ -34,13 +38,18 @@
 	return animation;
 }
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue
 {
-	NSMutableArray *values = [NSMutableArray arrayWithCapacity:AHEasingKeyframeCount];
+    return [self animationWithKeyPath:path function:function fromValue:fromValue toValue:toValue keyframeCount:AHEasingDefaultKeyframeCount];
+}
+
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint keyframeCount:(size_t)keyframeCount
+{
+	NSMutableArray *values = [NSMutableArray arrayWithCapacity:keyframeCount];
 	
 	CGFloat t = 0.0;
-	CGFloat dt = 1.0 / (AHEasingKeyframeCount - 1);
-	for(size_t frame = 0; frame < AHEasingKeyframeCount; ++frame, t += dt)
+	CGFloat dt = 1.0 / (keyframeCount - 1);
+	for(size_t frame = 0; frame < keyframeCount; ++frame, t += dt)
 	{
 		CGFloat x = fromPoint.x + function(t) * (toPoint.x - fromPoint.x);
 		CGFloat y = fromPoint.y + function(t) * (toPoint.y - fromPoint.y);
@@ -52,13 +61,18 @@
 	return animation;
 }
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromSize:(CGSize)fromSize toSize:(CGSize)toSize
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint
 {
-	NSMutableArray *values = [NSMutableArray arrayWithCapacity:AHEasingKeyframeCount];
+    return [self animationWithKeyPath:path function:function fromPoint:fromPoint toPoint:toPoint keyframeCount:AHEasingDefaultKeyframeCount];
+}
+
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromSize:(CGSize)fromSize toSize:(CGSize)toSize keyframeCount:(size_t)keyframeCount
+{
+	NSMutableArray *values = [NSMutableArray arrayWithCapacity:keyframeCount];
 	
 	CGFloat t = 0.0;
-	CGFloat dt = 1.0 / (AHEasingKeyframeCount - 1);
-	for(size_t frame = 0; frame < AHEasingKeyframeCount; ++frame, t += dt)
+	CGFloat dt = 1.0 / (keyframeCount - 1);
+	for(size_t frame = 0; frame < keyframeCount; ++frame, t += dt)
 	{
 		CGFloat w = fromSize.width + function(t) * (toSize.width - fromSize.width);
 		CGFloat h = fromSize.height + function(t) * (toSize.height - fromSize.height);
@@ -68,6 +82,11 @@
 	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:path];
 	[animation setValues:values];
 	return animation;
+}
+
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromSize:(CGSize)fromSize toSize:(CGSize)toSize
+{
+    return [self animationWithKeyPath:path function:function fromSize:fromSize toSize:toSize keyframeCount:AHEasingDefaultKeyframeCount];
 }
 
 @end
