@@ -16,12 +16,21 @@
 @interface CAKeyframeAnimation (AHEasing)
 
 // Factory method to create a keyframe animation for animating a scalar value
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue keyframeCount:(size_t)keyframeCount;
+
+// Factory method to create a keyframe animation for animating a scalar value, with keyFrameCount set to AHEasingDefaultKeyframeCount
 + (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue;
 
 // Factory method to create a keyframe animation for animating between two points
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint keyframeCount:(size_t)keyframeCount;
+
+// Factory method to create a keyframe animation for animating between two points, with keyFrameCount set to AHEasingDefaultKeyframeCount
 + (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromPoint:(CGPoint)fromValue toPoint:(CGPoint)toValue;
 
 // Factory method to create a keyframe animation for animating between two sizes
++ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromSize:(CGSize)fromSize toSize:(CGSize)toSize keyframeCount:(size_t)keyframeCount;
+
+// Factory method to create a keyframe animation for animating between two sizes, with keyFrameCount set to AHEasingDefaultKeyframeCount
 + (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromSize:(CGSize)fromValue toSize:(CGSize)toValue;
 
 @end
