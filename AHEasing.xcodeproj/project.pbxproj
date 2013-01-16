@@ -7,107 +7,174 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80521A7A1398175D007386E6 /* CAKeyframeAnimation+AHEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 80521A791398175D007386E6 /* CAKeyframeAnimation+AHEasing.m */; };
-		80521A7E1398179C007386E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80521A7D1398179C007386E6 /* QuartzCore.framework */; };
-		806EB7F0138F91A700E2D4A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7EF138F91A700E2D4A7 /* UIKit.framework */; };
-		806EB7F2138F91A700E2D4A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F1138F91A700E2D4A7 /* Foundation.framework */; };
-		806EB7F4138F91A700E2D4A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */; };
-		806EB7FA138F91A700E2D4A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 806EB7F8138F91A700E2D4A7 /* InfoPlist.strings */; };
-		806EB7FD138F91A700E2D4A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB7FC138F91A700E2D4A7 /* main.m */; };
-		806EB800138F91A700E2D4A7 /* AHEasingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB7FF138F91A700E2D4A7 /* AHEasingAppDelegate.m */; };
-		806EB803138F91A700E2D4A7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806EB801138F91A700E2D4A7 /* MainWindow.xib */; };
-		806EB806138F91A700E2D4A7 /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806EB805138F91A700E2D4A7 /* PlaygroundViewController.m */; };
-		806EB809138F91A700E2D4A7 /* PlaygroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806EB807138F91A700E2D4A7 /* PlaygroundView.xib */; };
-		806EB82A138F91C700E2D4A7 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 806EB828138F91C700E2D4A7 /* easing.c */; };
-		80913CD41399414800FE19D5 /* EasingFunctionGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80913CD31399414800FE19D5 /* EasingFunctionGraphView.m */; };
-		80913CD7139960F100FE19D5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80913CD5139960F100FE19D5 /* Icon.png */; };
-		80913CD8139960F100FE19D5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80913CD6139960F100FE19D5 /* Icon@2x.png */; };
+		8045277616A63161001DB532 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7EF138F91A700E2D4A7 /* UIKit.framework */; };
+		8045277716A63161001DB532 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F1138F91A700E2D4A7 /* Foundation.framework */; };
+		8045277816A63161001DB532 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */; };
+		8045277E16A63161001DB532 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8045277C16A63161001DB532 /* InfoPlist.strings */; };
+		8045278016A63161001DB532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8045277F16A63161001DB532 /* main.m */; };
+		8045278416A63162001DB532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8045278316A63162001DB532 /* AppDelegate.m */; };
+		8045278616A63162001DB532 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8045278516A63162001DB532 /* Default.png */; };
+		8045278816A63162001DB532 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8045278716A63162001DB532 /* Default@2x.png */; };
+		8045278A16A63162001DB532 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8045278916A63162001DB532 /* Default-568h@2x.png */; };
+		8045279A16A6318C001DB532 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8045279816A6318C001DB532 /* InfoPlist.strings */; };
+		8045279C16A6318C001DB532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8045279B16A6318C001DB532 /* main.m */; };
+		804527A016A6318C001DB532 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8045279E16A6318C001DB532 /* Credits.rtf */; };
+		804527A316A6318C001DB532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 804527A216A6318C001DB532 /* AppDelegate.m */; };
+		804527A616A6318C001DB532 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804527A416A6318C001DB532 /* MainMenu.xib */; };
+		804527AF16A633E1001DB532 /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804527AD16A633E0001DB532 /* PlaygroundViewController.m */; };
+		804527B216A634DD001DB532 /* CAKeyframeAnimation+AHEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 80521A791398175D007386E6 /* CAKeyframeAnimation+AHEasing.m */; };
+		804527B316A634DD001DB532 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 806EB828138F91C700E2D4A7 /* easing.c */; };
+		804527B416A634E1001DB532 /* CAKeyframeAnimation+AHEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 80521A791398175D007386E6 /* CAKeyframeAnimation+AHEasing.m */; };
+		804527B516A634E1001DB532 /* easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 806EB828138F91C700E2D4A7 /* easing.c */; };
+		804527B716A6351A001DB532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804527B616A6351A001DB532 /* QuartzCore.framework */; };
+		804527B916A63528001DB532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804527B816A63528001DB532 /* QuartzCore.framework */; };
+		804527BC16A63724001DB532 /* PlaygroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804527BA16A63724001DB532 /* PlaygroundView.xib */; };
+		804527BF16A63736001DB532 /* PlaygroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804527BD16A63736001DB532 /* PlaygroundView.xib */; };
+		804527C216A668BF001DB532 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804527C116A668BF001DB532 /* CoreGraphics.framework */; };
+		804527C616A668D6001DB532 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804527C516A668D6001DB532 /* AppKit.framework */; };
+		804527CA16A66A6F001DB532 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 804527C816A66A6F001DB532 /* Icon.png */; };
+		804527CB16A66A6F001DB532 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 804527C916A66A6F001DB532 /* Icon@2x.png */; };
+		804527CE16A66C10001DB532 /* PlaygroundNSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804527CD16A66C10001DB532 /* PlaygroundNSViewController.m */; };
+		804527D316A66FBD001DB532 /* EasingFunctionGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 804527D216A66FBD001DB532 /* EasingFunctionGraphView.m */; };
+		804527D416A67C89001DB532 /* EasingFunctionGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 804527D216A66FBD001DB532 /* EasingFunctionGraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8045277516A63161001DB532 /* EasingPlayground-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EasingPlayground-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8045277B16A63161001DB532 /* EasingPlayground-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EasingPlayground-iOS-Info.plist"; sourceTree = "<group>"; };
+		8045277D16A63161001DB532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8045277F16A63161001DB532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8045278116A63162001DB532 /* EasingPlayground-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasingPlayground-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		8045278216A63162001DB532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8045278316A63162001DB532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8045278516A63162001DB532 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8045278716A63162001DB532 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8045278916A63162001DB532 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8045279216A6318C001DB532 /* EasingPlayground-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EasingPlayground-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8045279716A6318C001DB532 /* EasingPlayground-Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EasingPlayground-Mac-Info.plist"; sourceTree = "<group>"; };
+		8045279916A6318C001DB532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8045279B16A6318C001DB532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8045279D16A6318C001DB532 /* EasingPlayground-Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasingPlayground-Mac-Prefix.pch"; sourceTree = "<group>"; };
+		8045279F16A6318C001DB532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		804527A116A6318C001DB532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		804527A216A6318C001DB532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		804527A516A6318C001DB532 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		804527AC16A633E0001DB532 /* PlaygroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundViewController.h; sourceTree = "<group>"; };
+		804527AD16A633E0001DB532 /* PlaygroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundViewController.m; sourceTree = "<group>"; };
+		804527B616A6351A001DB532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		804527B816A63528001DB532 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		804527BB16A63724001DB532 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PlaygroundView.xib; sourceTree = "<group>"; };
+		804527BE16A63736001DB532 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PlaygroundView.xib; sourceTree = "<group>"; };
+		804527C116A668BF001DB532 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		804527C316A668CC001DB532 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		804527C516A668D6001DB532 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		804527C816A66A6F001DB532 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		804527C916A66A6F001DB532 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		804527CC16A66C10001DB532 /* PlaygroundNSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundNSViewController.h; sourceTree = "<group>"; };
+		804527CD16A66C10001DB532 /* PlaygroundNSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundNSViewController.m; sourceTree = "<group>"; };
+		804527D016A66F5A001DB532 /* EasingDeclarations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EasingDeclarations.h; path = "EasingPlayground-Common/EasingDeclarations.h"; sourceTree = "<group>"; };
+		804527D116A66FBD001DB532 /* EasingFunctionGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasingFunctionGraphView.h; path = "EasingPlayground-Common/EasingFunctionGraphView.h"; sourceTree = "<group>"; };
+		804527D216A66FBD001DB532 /* EasingFunctionGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasingFunctionGraphView.m; path = "EasingPlayground-Common/EasingFunctionGraphView.m"; sourceTree = "<group>"; };
 		80521A781398175D007386E6 /* CAKeyframeAnimation+AHEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAKeyframeAnimation+AHEasing.h"; sourceTree = "<group>"; };
 		80521A791398175D007386E6 /* CAKeyframeAnimation+AHEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAKeyframeAnimation+AHEasing.m"; sourceTree = "<group>"; };
-		80521A7D1398179C007386E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		806EB7EB138F91A700E2D4A7 /* AHEasing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHEasing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		806EB7EF138F91A700E2D4A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		806EB7F1138F91A700E2D4A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		806EB7F7138F91A700E2D4A7 /* AHEasing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AHEasing-Info.plist"; sourceTree = "<group>"; };
-		806EB7F9138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		806EB7FB138F91A700E2D4A7 /* AHEasing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AHEasing-Prefix.pch"; sourceTree = "<group>"; };
-		806EB7FC138F91A700E2D4A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		806EB7FE138F91A700E2D4A7 /* AHEasingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHEasingAppDelegate.h; sourceTree = "<group>"; };
-		806EB7FF138F91A700E2D4A7 /* AHEasingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHEasingAppDelegate.m; sourceTree = "<group>"; };
-		806EB802138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		806EB804138F91A700E2D4A7 /* PlaygroundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaygroundViewController.h; sourceTree = "<group>"; };
-		806EB805138F91A700E2D4A7 /* PlaygroundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaygroundViewController.m; sourceTree = "<group>"; };
-		806EB808138F91A700E2D4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PlaygroundView.xib; sourceTree = "<group>"; };
 		806EB828138F91C700E2D4A7 /* easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
 		806EB829138F91C700E2D4A7 /* easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
-		80913CD21399414800FE19D5 /* EasingFunctionGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasingFunctionGraphView.h; sourceTree = "<group>"; };
-		80913CD31399414800FE19D5 /* EasingFunctionGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasingFunctionGraphView.m; sourceTree = "<group>"; };
-		80913CD5139960F100FE19D5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		80913CD6139960F100FE19D5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		806EB7E8138F91A700E2D4A7 /* Frameworks */ = {
+		8045277216A63161001DB532 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80521A7E1398179C007386E6 /* QuartzCore.framework in Frameworks */,
-				806EB7F0138F91A700E2D4A7 /* UIKit.framework in Frameworks */,
-				806EB7F2138F91A700E2D4A7 /* Foundation.framework in Frameworks */,
-				806EB7F4138F91A700E2D4A7 /* CoreGraphics.framework in Frameworks */,
+				804527B916A63528001DB532 /* QuartzCore.framework in Frameworks */,
+				8045277616A63161001DB532 /* UIKit.framework in Frameworks */,
+				8045277716A63161001DB532 /* Foundation.framework in Frameworks */,
+				8045277816A63161001DB532 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8045278F16A6318B001DB532 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804527C616A668D6001DB532 /* AppKit.framework in Frameworks */,
+				804527C216A668BF001DB532 /* CoreGraphics.framework in Frameworks */,
+				804527B716A6351A001DB532 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		80521A7F13982633007386E6 /* View */ = {
+		8045277916A63161001DB532 /* EasingPlayground-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				806EB801138F91A700E2D4A7 /* MainWindow.xib */,
-				806EB807138F91A700E2D4A7 /* PlaygroundView.xib */,
-				80913CD21399414800FE19D5 /* EasingFunctionGraphView.h */,
-				80913CD31399414800FE19D5 /* EasingFunctionGraphView.m */,
+				804527AC16A633E0001DB532 /* PlaygroundViewController.h */,
+				804527AD16A633E0001DB532 /* PlaygroundViewController.m */,
+				8045278216A63162001DB532 /* AppDelegate.h */,
+				8045278316A63162001DB532 /* AppDelegate.m */,
+				804527BD16A63736001DB532 /* PlaygroundView.xib */,
+				8045277A16A63161001DB532 /* Supporting Files */,
 			);
-			name = View;
+			path = "EasingPlayground-iOS";
 			sourceTree = "<group>";
 		};
-		80521A801398263A007386E6 /* Controller */ = {
+		8045277A16A63161001DB532 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				806EB7FE138F91A700E2D4A7 /* AHEasingAppDelegate.h */,
-				806EB7FF138F91A700E2D4A7 /* AHEasingAppDelegate.m */,
-				806EB804138F91A700E2D4A7 /* PlaygroundViewController.h */,
-				806EB805138F91A700E2D4A7 /* PlaygroundViewController.m */,
+				804527C816A66A6F001DB532 /* Icon.png */,
+				804527C916A66A6F001DB532 /* Icon@2x.png */,
+				8045277B16A63161001DB532 /* EasingPlayground-iOS-Info.plist */,
+				8045277C16A63161001DB532 /* InfoPlist.strings */,
+				8045277F16A63161001DB532 /* main.m */,
+				8045278116A63162001DB532 /* EasingPlayground-iOS-Prefix.pch */,
+				8045278516A63162001DB532 /* Default.png */,
+				8045278716A63162001DB532 /* Default@2x.png */,
+				8045278916A63162001DB532 /* Default-568h@2x.png */,
 			);
-			name = Controller;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		80521A8113982642007386E6 /* Other Source */ = {
+		8045279516A6318C001DB532 /* EasingPlayground-Mac */ = {
 			isa = PBXGroup;
 			children = (
-				806EB7FB138F91A700E2D4A7 /* AHEasing-Prefix.pch */,
-				806EB7FC138F91A700E2D4A7 /* main.m */,
+				804527CC16A66C10001DB532 /* PlaygroundNSViewController.h */,
+				804527CD16A66C10001DB532 /* PlaygroundNSViewController.m */,
+				804527A116A6318C001DB532 /* AppDelegate.h */,
+				804527A216A6318C001DB532 /* AppDelegate.m */,
+				804527BA16A63724001DB532 /* PlaygroundView.xib */,
+				804527A416A6318C001DB532 /* MainMenu.xib */,
+				8045279616A6318C001DB532 /* Supporting Files */,
 			);
-			name = "Other Source";
+			path = "EasingPlayground-Mac";
 			sourceTree = "<group>";
 		};
-		80521A821398268A007386E6 /* Resources */ = {
+		8045279616A6318C001DB532 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				80913CD5139960F100FE19D5 /* Icon.png */,
-				80913CD6139960F100FE19D5 /* Icon@2x.png */,
-				806EB7F7138F91A700E2D4A7 /* AHEasing-Info.plist */,
-				806EB7F8138F91A700E2D4A7 /* InfoPlist.strings */,
+				8045279716A6318C001DB532 /* EasingPlayground-Mac-Info.plist */,
+				8045279816A6318C001DB532 /* InfoPlist.strings */,
+				8045279B16A6318C001DB532 /* main.m */,
+				8045279D16A6318C001DB532 /* EasingPlayground-Mac-Prefix.pch */,
+				8045279E16A6318C001DB532 /* Credits.rtf */,
 			);
-			name = Resources;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		80521A83139826A8007386E6 /* Easing */ = {
+		804527CF16A66F10001DB532 /* EasingPlayground-Common */ = {
+			isa = PBXGroup;
+			children = (
+				804527D016A66F5A001DB532 /* EasingDeclarations.h */,
+				804527D116A66FBD001DB532 /* EasingFunctionGraphView.h */,
+				804527D216A66FBD001DB532 /* EasingFunctionGraphView.m */,
+			);
+			name = "EasingPlayground-Common";
+			sourceTree = "<group>";
+		};
+		80521A83139826A8007386E6 /* AHEasing */ = {
 			isa = PBXGroup;
 			children = (
 				80521A781398175D007386E6 /* CAKeyframeAnimation+AHEasing.h */,
@@ -115,13 +182,16 @@
 				806EB829138F91C700E2D4A7 /* easing.h */,
 				806EB828138F91C700E2D4A7 /* easing.c */,
 			);
-			name = Easing;
+			path = AHEasing;
 			sourceTree = "<group>";
 		};
 		806EB7E0138F91A700E2D4A7 = {
 			isa = PBXGroup;
 			children = (
-				806EB7F5138F91A700E2D4A7 /* AHEasing */,
+				80521A83139826A8007386E6 /* AHEasing */,
+				804527CF16A66F10001DB532 /* EasingPlayground-Common */,
+				8045277916A63161001DB532 /* EasingPlayground-iOS */,
+				8045279516A6318C001DB532 /* EasingPlayground-Mac */,
 				806EB7EE138F91A700E2D4A7 /* Frameworks */,
 				806EB7EC138F91A700E2D4A7 /* Products */,
 			);
@@ -130,7 +200,8 @@
 		806EB7EC138F91A700E2D4A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				806EB7EB138F91A700E2D4A7 /* AHEasing.app */,
+				8045277516A63161001DB532 /* EasingPlayground-iOS.app */,
+				8045279216A6318C001DB532 /* EasingPlayground-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,44 +209,53 @@
 		806EB7EE138F91A700E2D4A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				804527C516A668D6001DB532 /* AppKit.framework */,
+				804527C316A668CC001DB532 /* Foundation.framework */,
+				804527C116A668BF001DB532 /* CoreGraphics.framework */,
+				804527B816A63528001DB532 /* QuartzCore.framework */,
 				806EB7EF138F91A700E2D4A7 /* UIKit.framework */,
 				806EB7F1138F91A700E2D4A7 /* Foundation.framework */,
 				806EB7F3138F91A700E2D4A7 /* CoreGraphics.framework */,
-				80521A7D1398179C007386E6 /* QuartzCore.framework */,
+				804527B616A6351A001DB532 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		806EB7F5138F91A700E2D4A7 /* AHEasing */ = {
-			isa = PBXGroup;
-			children = (
-				80521A801398263A007386E6 /* Controller */,
-				80521A7F13982633007386E6 /* View */,
-				80521A83139826A8007386E6 /* Easing */,
-				80521A8113982642007386E6 /* Other Source */,
-				80521A821398268A007386E6 /* Resources */,
-			);
-			path = AHEasing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		806EB7EA138F91A700E2D4A7 /* AHEasing */ = {
+		8045277416A63161001DB532 /* EasingPlayground-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 806EB822138F91A700E2D4A7 /* Build configuration list for PBXNativeTarget "AHEasing" */;
+			buildConfigurationList = 8045278B16A63162001DB532 /* Build configuration list for PBXNativeTarget "EasingPlayground-iOS" */;
 			buildPhases = (
-				806EB7E7138F91A700E2D4A7 /* Sources */,
-				806EB7E8138F91A700E2D4A7 /* Frameworks */,
-				806EB7E9138F91A700E2D4A7 /* Resources */,
+				8045277116A63161001DB532 /* Sources */,
+				8045277216A63161001DB532 /* Frameworks */,
+				8045277316A63161001DB532 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AHEasing;
-			productName = AHEasing;
-			productReference = 806EB7EB138F91A700E2D4A7 /* AHEasing.app */;
+			name = "EasingPlayground-iOS";
+			productName = "EasingPlayground-iOS";
+			productReference = 8045277516A63161001DB532 /* EasingPlayground-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8045279116A6318B001DB532 /* EasingPlayground-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 804527A716A6318C001DB532 /* Build configuration list for PBXNativeTarget "EasingPlayground-Mac" */;
+			buildPhases = (
+				8045278E16A6318B001DB532 /* Sources */,
+				8045278F16A6318B001DB532 /* Frameworks */,
+				8045279016A6318B001DB532 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EasingPlayground-Mac";
+			productName = "EasingPlayground-Mac";
+			productReference = 8045279216A6318C001DB532 /* EasingPlayground-Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,63 +279,114 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				806EB7EA138F91A700E2D4A7 /* AHEasing */,
+				8045277416A63161001DB532 /* EasingPlayground-iOS */,
+				8045279116A6318B001DB532 /* EasingPlayground-Mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		806EB7E9138F91A700E2D4A7 /* Resources */ = {
+		8045277316A63161001DB532 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				806EB7FA138F91A700E2D4A7 /* InfoPlist.strings in Resources */,
-				806EB803138F91A700E2D4A7 /* MainWindow.xib in Resources */,
-				806EB809138F91A700E2D4A7 /* PlaygroundView.xib in Resources */,
-				80913CD7139960F100FE19D5 /* Icon.png in Resources */,
-				80913CD8139960F100FE19D5 /* Icon@2x.png in Resources */,
+				8045277E16A63161001DB532 /* InfoPlist.strings in Resources */,
+				8045278616A63162001DB532 /* Default.png in Resources */,
+				8045278816A63162001DB532 /* Default@2x.png in Resources */,
+				8045278A16A63162001DB532 /* Default-568h@2x.png in Resources */,
+				804527BF16A63736001DB532 /* PlaygroundView.xib in Resources */,
+				804527CA16A66A6F001DB532 /* Icon.png in Resources */,
+				804527CB16A66A6F001DB532 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8045279016A6318B001DB532 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8045279A16A6318C001DB532 /* InfoPlist.strings in Resources */,
+				804527A016A6318C001DB532 /* Credits.rtf in Resources */,
+				804527A616A6318C001DB532 /* MainMenu.xib in Resources */,
+				804527BC16A63724001DB532 /* PlaygroundView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		806EB7E7138F91A700E2D4A7 /* Sources */ = {
+		8045277116A63161001DB532 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				806EB7FD138F91A700E2D4A7 /* main.m in Sources */,
-				806EB800138F91A700E2D4A7 /* AHEasingAppDelegate.m in Sources */,
-				806EB806138F91A700E2D4A7 /* PlaygroundViewController.m in Sources */,
-				806EB82A138F91C700E2D4A7 /* easing.c in Sources */,
-				80521A7A1398175D007386E6 /* CAKeyframeAnimation+AHEasing.m in Sources */,
-				80913CD41399414800FE19D5 /* EasingFunctionGraphView.m in Sources */,
+				804527D416A67C89001DB532 /* EasingFunctionGraphView.m in Sources */,
+				804527B216A634DD001DB532 /* CAKeyframeAnimation+AHEasing.m in Sources */,
+				804527B316A634DD001DB532 /* easing.c in Sources */,
+				8045278016A63161001DB532 /* main.m in Sources */,
+				8045278416A63162001DB532 /* AppDelegate.m in Sources */,
+				804527AF16A633E1001DB532 /* PlaygroundViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8045278E16A6318B001DB532 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804527B416A634E1001DB532 /* CAKeyframeAnimation+AHEasing.m in Sources */,
+				804527B516A634E1001DB532 /* easing.c in Sources */,
+				8045279C16A6318C001DB532 /* main.m in Sources */,
+				804527A316A6318C001DB532 /* AppDelegate.m in Sources */,
+				804527CE16A66C10001DB532 /* PlaygroundNSViewController.m in Sources */,
+				804527D316A66FBD001DB532 /* EasingFunctionGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		806EB7F8138F91A700E2D4A7 /* InfoPlist.strings */ = {
+		8045277C16A63161001DB532 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				806EB7F9138F91A700E2D4A7 /* en */,
+				8045277D16A63161001DB532 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		806EB801138F91A700E2D4A7 /* MainWindow.xib */ = {
+		8045279816A6318C001DB532 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				806EB802138F91A700E2D4A7 /* en */,
+				8045279916A6318C001DB532 /* en */,
 			);
-			name = MainWindow.xib;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		806EB807138F91A700E2D4A7 /* PlaygroundView.xib */ = {
+		8045279E16A6318C001DB532 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				806EB808138F91A700E2D4A7 /* en */,
+				8045279F16A6318C001DB532 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		804527A416A6318C001DB532 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				804527A516A6318C001DB532 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		804527BA16A63724001DB532 /* PlaygroundView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				804527BB16A63724001DB532 /* en */,
+			);
+			name = PlaygroundView.xib;
+			sourceTree = "<group>";
+		};
+		804527BD16A63736001DB532 /* PlaygroundView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				804527BE16A63736001DB532 /* en */,
 			);
 			name = PlaygroundView.xib;
 			sourceTree = "<group>";
@@ -263,6 +394,138 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8045278C16A63162001DB532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasingPlayground-iOS/EasingPlayground-iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				INFOPLIST_FILE = "EasingPlayground-iOS/EasingPlayground-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8045278D16A63162001DB532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasingPlayground-iOS/EasingPlayground-iOS-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				INFOPLIST_FILE = "EasingPlayground-iOS/EasingPlayground-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		804527A816A6318C001DB532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode46-DP4.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasingPlayground-Mac/EasingPlayground-Mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					AH_EASING_USE_DBL_PRECIS,
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				INFOPLIST_FILE = "EasingPlayground-Mac/EasingPlayground-Mac-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		804527A916A6318C001DB532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode46-DP4.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasingPlayground-Mac/EasingPlayground-Mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = AH_EASING_USE_DBL_PRECIS;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				INFOPLIST_FILE = "EasingPlayground-Mac/EasingPlayground-Mac-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		806EB820138F91A700E2D4A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -277,6 +540,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
@@ -293,59 +557,36 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CFLAGS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-			};
-			name = Release;
-		};
-		806EB823138F91A700E2D4A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHEasing/AHEasing-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "AHEasing/AHEasing-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		806EB824138F91A700E2D4A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AHEasing/AHEasing-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "AHEasing/AHEasing-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8045278B16A63162001DB532 /* Build configuration list for PBXNativeTarget "EasingPlayground-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8045278C16A63162001DB532 /* Debug */,
+				8045278D16A63162001DB532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		804527A716A6318C001DB532 /* Build configuration list for PBXNativeTarget "EasingPlayground-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804527A816A6318C001DB532 /* Debug */,
+				804527A916A6318C001DB532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		806EB7E5138F91A700E2D4A7 /* Build configuration list for PBXProject "AHEasing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				806EB820138F91A700E2D4A7 /* Debug */,
 				806EB821138F91A700E2D4A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		806EB822138F91A700E2D4A7 /* Build configuration list for PBXNativeTarget "AHEasing" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				806EB823138F91A700E2D4A7 /* Debug */,
-				806EB824138F91A700E2D4A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -15,22 +15,8 @@
 #import "CAKeyframeAnimation+AHEasing.h"
 
 @implementation PlaygroundViewController
+
 @synthesize boid, graphView, curveSegmentedControl, easingSegmentedControl;
-
-- (void)dealloc
-{
-	[boid release];
-	[graphView release];
-	[curveSegmentedControl release];
-	[easingSegmentedControl release];
-
-    [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
 
 #pragma mark - View lifecycle
 
@@ -42,16 +28,6 @@
 	
 	UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewWasTapped:)];
 	[self.graphView addGestureRecognizer:tapRecognizer];
-	[tapRecognizer release];
-}
-
-- (void)viewDidUnload
-{
-	[self setBoid:nil];
-	[self setCurveSegmentedControl:nil];
-	[self setEasingSegmentedControl:nil];
-
-    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

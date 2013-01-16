@@ -1,7 +1,8 @@
 //
-//  AHEasingAppDelegate.m
+//  AppDelegate.m
+//  EasingPlayground-iOS
 //
-//  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2013, Auerhaus Development, LLC
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -10,26 +11,19 @@
 //  http://sam.zoy.org/wtfpl/COPYING for more details.
 //
 
-#import "AHEasingAppDelegate.h"
+#import "AppDelegate.h"
+#import "PlaygroundViewController.h"
 
-@implementation AHEasingAppDelegate
+@implementation AppDelegate
 
-@synthesize window, viewController;
+@synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	self.window.rootViewController = self.viewController;
-	[self.window makeKeyAndVisible];
-	
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	self.window.rootViewController = [[PlaygroundViewController alloc] initWithNibName:@"PlaygroundView" bundle:nil];
+    [self.window makeKeyAndVisible];
     return YES;
-}
-
-- (void)dealloc
-{
-	[window release], window = nil;
-	[viewController release], viewController = nil;
-	
-    [super dealloc];
 }
 
 @end

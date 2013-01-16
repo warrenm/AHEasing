@@ -30,7 +30,7 @@
 	for(size_t frame = 0; frame < keyframeCount; ++frame, t += dt)
 	{
 		CGFloat value = fromValue + function(t) * (toValue - fromValue);
-		[values addObject:[NSNumber numberWithFloat:value]];
+		[values addObject:[NSNumber numberWithFloat:(float)value]];
 	}
 	
 	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:path];
@@ -53,7 +53,11 @@
 	{
 		CGFloat x = fromPoint.x + function(t) * (toPoint.x - fromPoint.x);
 		CGFloat y = fromPoint.y + function(t) * (toPoint.y - fromPoint.y);
+#if TARGET_OS_IPHONE
 		[values addObject:[NSValue valueWithCGPoint:CGPointMake(x, y)]];
+#else
+		[values addObject:[NSValue valueWithPoint:NSMakePoint(x, y)]];
+#endif
 	}
 	
 	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:path];
@@ -76,7 +80,11 @@
 	{
 		CGFloat w = fromSize.width + function(t) * (toSize.width - fromSize.width);
 		CGFloat h = fromSize.height + function(t) * (toSize.height - fromSize.height);
+#if TARGET_OS_IPHONE
 		[values addObject:[NSValue valueWithCGSize:CGSizeMake(w, h)]];
+#else
+		[values addObject:[NSValue valueWithSize:NSMakeSize(w, h)]];
+#endif
 	}
 	
 	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:path];

@@ -1,7 +1,8 @@
 //
 //  main.m
+//  EasingPlayground-iOS
 //
-//  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2013, Auerhaus Development, LLC
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -12,10 +13,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AppDelegate.h"
+
 int main(int argc, char *argv[])
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	int retVal = UIApplicationMain(argc, argv, nil, nil);
-	[pool release];
-	return retVal;
+	int value = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+	[pool drain];
+	return value;
 }

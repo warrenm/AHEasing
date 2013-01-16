@@ -1,7 +1,8 @@
 //
-//  AHEasingAppDelegate.h
+//  AppDelegate.h
+//  EasingPlayground-Mac
 //
-//  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2013, Auerhaus Development, LLC
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -10,13 +11,10 @@
 //  http://sam.zoy.org/wtfpl/COPYING for more details.
 //
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 
-@interface AHEasingAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
-}
-
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UIViewController *viewController;
+@property (assign) IBOutlet NSWindow *window;
 
 @end

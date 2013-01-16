@@ -13,28 +13,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CAKeyframeAnimation+AHEasing.h"
 #import "EasingFunctionGraphView.h"
-
-enum CurveType
-{
-	CurveTypeLinear,
-	CurveTypeQuadratic,
-	CurveTypeCubic,
-	CurveTypeQuartic,
-	CurveTypeQuintic,
-	CurveTypeSine,
-	CurveTypeCircular,
-	CurveTypeExpo,
-	CurveTypeElastic,
-	CurveTypeBack,
-	CurveTypeBounce,
-};
-
-enum EasingMode
-{
-	EaseIn,
-	EaseOut,
-	EaseInOut,
-};
+#import "EasingDeclarations.h"
 
 @interface PlaygroundViewController : UIViewController {
 	BOOL animating;
