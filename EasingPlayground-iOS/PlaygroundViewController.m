@@ -16,8 +16,6 @@
 
 @implementation PlaygroundViewController
 
-@synthesize boid, graphView, curveSegmentedControl, easingSegmentedControl;
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -106,8 +104,8 @@
 			break;
 	}
 	
-	[graphView setEasingFunction:currentFunction];
-	[graphView setNeedsDisplay];
+	[self.graphView setEasingFunction:currentFunction];
+	[self.graphView setNeedsDisplay];
 }
 
 - (IBAction)curveSelectionChanged:(id)sender

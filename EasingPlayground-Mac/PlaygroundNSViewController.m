@@ -10,8 +10,6 @@
 
 @implementation PlaygroundNSViewController
 
-@synthesize boid, graphView;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]))
@@ -60,7 +58,7 @@
 
 		animating = YES;
 
-		[graphView setNeedsDisplay:YES];
+		[self.graphView setNeedsDisplay:YES];
 	}
 }
 
@@ -108,8 +106,8 @@
 			break;
 	}
 
-	[graphView setEasingFunction:currentFunction];
-	[graphView setNeedsDisplay:YES];
+	[self.graphView setEasingFunction:currentFunction];
+	[self.graphView setNeedsDisplay:YES];
 }
 
 - (IBAction)curveSelectionChanged:(id)sender

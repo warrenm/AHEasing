@@ -18,8 +18,8 @@
 	AHEasingFunction currentFunction;
 }
 
-@property(nonatomic, retain) IBOutlet NSView *boid;
-@property(nonatomic, retain) IBOutlet EasingFunctionGraphView *graphView;
+@property(nonatomic, strong) IBOutlet NSView *boid;
+@property(nonatomic, strong) IBOutlet EasingFunctionGraphView *graphView;
 
 - (IBAction)curveSelectionChanged:(id)sender;
 - (IBAction)easingSelectionChanged:(id)sender;

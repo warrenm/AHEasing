@@ -17,8 +17,7 @@
 
 int main(int argc, char *argv[])
 {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	int value = UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-	[pool drain];
-	return value;
+	@autoreleasepool {
+		return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+	}
 }

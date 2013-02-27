@@ -16,12 +16,12 @@
 #if TARGET_OS_IPHONE
 
 @interface EasingFunctionGraphView : UIView
-@property(nonatomic, assign) IBOutlet UIViewController *viewController; // Unused. Only here to void further preprocessor directives in the .m file.
+@property(nonatomic, strong) IBOutlet UIViewController *viewController; // Unused. Only here to void further preprocessor directives in the .m file.
 
 #else
 
 @interface EasingFunctionGraphView : NSView
-@property(nonatomic, assign) IBOutlet NSViewController *viewController;
+@property(nonatomic, strong) IBOutlet NSViewController *viewController;
 
 #endif
 

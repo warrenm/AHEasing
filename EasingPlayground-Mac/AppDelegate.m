@@ -16,12 +16,10 @@
 
 @implementation AppDelegate
 
-@synthesize window;
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	PlaygroundNSViewController *vc = [[PlaygroundNSViewController alloc] initWithNibName:@"PlaygroundView" bundle:nil];
-	[self.window.contentView addSubview:vc.view];
+	self.viewController = [[PlaygroundNSViewController alloc] initWithNibName:@"PlaygroundView" bundle:nil];
+	[self.window.contentView addSubview:self.viewController.view];
 	
 }
 

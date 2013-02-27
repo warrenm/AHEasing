@@ -21,8 +21,6 @@
 
 @implementation EasingFunctionGraphView
 
-@synthesize gridBounds, easingFunction, viewController;
-
 - (id)initWithFrame:(CGRect)frame
 {
     if((self = [super initWithFrame:frame]))
@@ -41,35 +39,35 @@
 
 - (void)commonInitialization
 {
-	easingFunction = LinearInterpolation;
-	gridBounds = CGRectMake(-1.3, -0.4, 3.6, 1.8);
+	_easingFunction = LinearInterpolation;
+	_gridBounds = CGRectMake(-1.3, -0.4, 3.6, 1.8);
 }
 
 #if !TARGET_OS_IPHONE
 - (void)setViewController:(NSViewController *)newController
 {
-    if (viewController)
+    if(_viewController)
     {
-        NSResponder *controllerNextResponder = [viewController nextResponder];
+        NSResponder *controllerNextResponder = [_viewController nextResponder];
         [super setNextResponder:controllerNextResponder];
-        [viewController setNextResponder:nil];
+        [_viewController setNextResponder:nil];
     }
 
-    viewController = newController;
+    _viewController = newController;
 
     if (newController)
     {
         NSResponder *ownNextResponder = [self nextResponder];
-        [super setNextResponder: viewController];
-        [viewController setNextResponder:ownNextResponder];
+        [super setNextResponder:_viewController];
+        [_viewController setNextResponder:ownNextResponder];
     }
 }
 
 - (void)setNextResponder:(NSResponder *)newNextResponder
 {
-    if (viewController)
+    if(_viewController)
     {
-        [viewController setNextResponder:newNextResponder];
+        [_viewController setNextResponder:newNextResponder];
         return;
     }
 
@@ -96,12 +94,12 @@
 #endif
 	
 	CGSize viewSize = [self bounds].size;
-	CGSize gridSize = gridBounds.size;
+	CGSize gridSize = self.gridBounds.size;
 	
 	CGFloat xScale = viewSize.width / gridSize.width;
 	CGFloat yScale = viewSize.height / gridSize.height;
 	
-	CGPoint mappedOrigin = gridBounds.origin;
+	CGPoint mappedOrigin = self.gridBounds.origin;
 	
 	// Transform view coordinates to match grid coordinates
 	CGContextScaleCTM(context, xScale, -yScale);
@@ -136,12 +134,12 @@
 	
 	// Draw easing function path
 	CGFloat x = 0;
-	CGFloat y = easingFunction(x);
+	CGFloat y = self.easingFunction(x);
 	CGContextMoveToPoint(context, x, y);
 	
 	while(x <= 1.0)
 	{
-		CGFloat y = easingFunction(x);
+		CGFloat y = self.easingFunction(x);
 		CGContextAddLineToPoint(context, x, y);
 		x += gridSize.width / 300;
 	}
@@ -150,6 +148,11 @@
 	CGContextSetLineJoin(context, kCGLineJoinRound);
 	CGContextSetStrokeColorWithColor(context, black);
 	CGContextStrokePath(context);
+
+#if !TARGET_OS_IPHONE
+	CGColorRelease(lightGray);
+	CGColorRelease(black);
+#endif
 }
 
 @end

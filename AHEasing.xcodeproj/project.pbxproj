@@ -30,7 +30,6 @@
 		804527B916A63528001DB532 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804527B816A63528001DB532 /* QuartzCore.framework */; };
 		804527BC16A63724001DB532 /* PlaygroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804527BA16A63724001DB532 /* PlaygroundView.xib */; };
 		804527BF16A63736001DB532 /* PlaygroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804527BD16A63736001DB532 /* PlaygroundView.xib */; };
-		804527C216A668BF001DB532 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804527C116A668BF001DB532 /* CoreGraphics.framework */; };
 		804527C616A668D6001DB532 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804527C516A668D6001DB532 /* AppKit.framework */; };
 		804527CA16A66A6F001DB532 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 804527C816A66A6F001DB532 /* Icon.png */; };
 		804527CB16A66A6F001DB532 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 804527C916A66A6F001DB532 /* Icon@2x.png */; };
@@ -101,7 +100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				804527C616A668D6001DB532 /* AppKit.framework in Frameworks */,
-				804527C216A668BF001DB532 /* CoreGraphics.framework in Frameworks */,
 				804527B716A6351A001DB532 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +262,7 @@
 		806EB7E2138F91A700E2D4A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Auerhaus Development, LLC";
 			};
 			buildConfigurationList = 806EB7E5138F91A700E2D4A7 /* Build configuration list for PBXProject "AHEasing" */;
@@ -415,6 +413,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				INFOPLIST_FILE = "EasingPlayground-iOS/EasingPlayground-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -440,6 +439,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasingPlayground-iOS/EasingPlayground-iOS-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				INFOPLIST_FILE = "EasingPlayground-iOS/EasingPlayground-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -455,8 +455,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -466,10 +466,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode46-DP4.app/Contents/Developer/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -478,10 +476,11 @@
 					AH_EASING_USE_DBL_PRECIS,
 					"DEBUG=1",
 				);
+				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				INFOPLIST_FILE = "EasingPlayground-Mac/EasingPlayground-Mac-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -495,8 +494,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -507,18 +506,17 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode46-DP4.app/Contents/Developer/Library/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasingPlayground-Mac/EasingPlayground-Mac-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = AH_EASING_USE_DBL_PRECIS;
+				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				INFOPLIST_FILE = "EasingPlayground-Mac/EasingPlayground-Mac-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -539,7 +537,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -556,7 +554,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -573,6 +571,7 @@
 				8045278D16A63162001DB532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		804527A716A6318C001DB532 /* Build configuration list for PBXNativeTarget "EasingPlayground-Mac" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +580,7 @@
 				804527A916A6318C001DB532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		806EB7E5138F91A700E2D4A7 /* Build configuration list for PBXProject "AHEasing" */ = {
 			isa = XCConfigurationList;

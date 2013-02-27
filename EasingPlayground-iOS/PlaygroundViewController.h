@@ -21,10 +21,10 @@
 	AHEasingFunction currentFunction;
 }
 
-@property(nonatomic, retain) IBOutlet UIView *boid;
-@property(nonatomic, retain) IBOutlet EasingFunctionGraphView *graphView;
-@property (nonatomic, retain) IBOutlet UISegmentedControl *curveSegmentedControl;
-@property (nonatomic, retain) IBOutlet UISegmentedControl *easingSegmentedControl;
+@property(nonatomic, strong) IBOutlet UIView *boid;
+@property(nonatomic, strong) IBOutlet EasingFunctionGraphView *graphView;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *curveSegmentedControl;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *easingSegmentedControl;
 
 - (IBAction)curveSelectionChanged:(id)sender;
 - (IBAction)easingSelectionChanged:(id)sender;
