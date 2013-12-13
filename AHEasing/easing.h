@@ -13,6 +13,10 @@
 #ifndef AH_EASING_H
 #define AH_EASING_H
 
+#if defined(__LP64__) && !defined(AH_EASING_USE_DBL_PRECIS)
+#define AH_EASING_USE_DBL_PRECIS
+#endif
+
 #ifdef AH_EASING_USE_DBL_PRECIS
 #define AHFloat double
 #else
