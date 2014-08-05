@@ -11,7 +11,7 @@ The useful portion of this project consists of two parts:
 Supported functions
 --------
 
-The following types of easing functions are planned to be supported:
+The following types of easing functions are supported:
 
 * Linear
 * Quadratic
@@ -24,7 +24,9 @@ The following types of easing functions are planned to be supported:
 * Bounce
 * Back
 
-Each of these has corresponding ease-in, ease-out, and ease-in-out variants. The core easing functions are implemented as C functions that take a time parameter and return a progress parameter, which can subsequently be used to interpolate any quantity.
+Each of these has corresponding ease-in, ease-out, and ease-in-out variants. Here's a [handy cheat sheet](http://easings.net) that includes visualizations and animation demos for these functions.
+
+The core easing functions are implemented as C functions that take a time parameter and return a progress parameter, which can subsequently be used to interpolate any quantity.
 
 Goals
 --------
