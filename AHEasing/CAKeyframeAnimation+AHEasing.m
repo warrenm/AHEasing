@@ -21,7 +21,11 @@
 
 @implementation CAKeyframeAnimation (AHEasing)
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue keyframeCount:(size_t)keyframeCount
++ (instancetype)animationWithKeyPath:(NSString *)path
+                            function:(AHEasingFunction)function
+                           fromValue:(CGFloat)fromValue
+                             toValue:(CGFloat)toValue
+                       keyframeCount:(size_t)keyframeCount
 {
 	NSMutableArray *values = [NSMutableArray arrayWithCapacity:keyframeCount];
 	
@@ -38,12 +42,23 @@
 	return animation;
 }
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromValue:(CGFloat)fromValue toValue:(CGFloat)toValue
++ (instancetype)animationWithKeyPath:(NSString *)path
+                            function:(AHEasingFunction)function
+                           fromValue:(CGFloat)fromValue
+                             toValue:(CGFloat)toValue
 {
-    return [self animationWithKeyPath:path function:function fromValue:fromValue toValue:toValue keyframeCount:AHEasingDefaultKeyframeCount];
+    return [self animationWithKeyPath:path
+                             function:function
+                            fromValue:fromValue
+                              toValue:toValue
+                        keyframeCount:AHEasingDefaultKeyframeCount];
 }
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint keyframeCount:(size_t)keyframeCount
++ (instancetype)animationWithKeyPath:(NSString *)path
+                            function:(AHEasingFunction)function
+                           fromPoint:(CGPoint)fromPoint
+                             toPoint:(CGPoint)toPoint
+                       keyframeCount:(size_t)keyframeCount
 {
 	NSMutableArray *values = [NSMutableArray arrayWithCapacity:keyframeCount];
 	
@@ -65,12 +80,23 @@
 	return animation;
 }
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint
++ (instancetype)animationWithKeyPath:(NSString *)path
+                            function:(AHEasingFunction)function
+                           fromPoint:(CGPoint)fromPoint
+                             toPoint:(CGPoint)toPoint
 {
-    return [self animationWithKeyPath:path function:function fromPoint:fromPoint toPoint:toPoint keyframeCount:AHEasingDefaultKeyframeCount];
+    return [self animationWithKeyPath:path
+                             function:function
+                            fromPoint:fromPoint
+                              toPoint:toPoint
+                        keyframeCount:AHEasingDefaultKeyframeCount];
 }
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromSize:(CGSize)fromSize toSize:(CGSize)toSize keyframeCount:(size_t)keyframeCount
++ (instancetype)animationWithKeyPath:(NSString *)path
+                            function:(AHEasingFunction)function
+                            fromSize:(CGSize)fromSize
+                              toSize:(CGSize)toSize
+                       keyframeCount:(size_t)keyframeCount
 {
 	NSMutableArray *values = [NSMutableArray arrayWithCapacity:keyframeCount];
 	
@@ -92,9 +118,79 @@
 	return animation;
 }
 
-+ (id)animationWithKeyPath:(NSString *)path function:(AHEasingFunction)function fromSize:(CGSize)fromSize toSize:(CGSize)toSize
++ (instancetype)animationWithKeyPath:(NSString *)path
+                  function:(AHEasingFunction)function
+                  fromSize:(CGSize)fromSize
+                    toSize:(CGSize)toSize
 {
-    return [self animationWithKeyPath:path function:function fromSize:fromSize toSize:toSize keyframeCount:AHEasingDefaultKeyframeCount];
+    return [self animationWithKeyPath:path
+                             function:function
+                             fromSize:fromSize
+                               toSize:toSize
+                        keyframeCount:AHEasingDefaultKeyframeCount];
+}
+
++ (instancetype)animationWithKeyPath:(NSString *)path
+                  function:(AHEasingFunction)function
+             fromTransform:(CGAffineTransform)fromTransform
+               toTransform:(CGAffineTransform)toTransform
+             keyframeCount:(size_t)keyframeCount
+{
+    NSMutableArray *values = [NSMutableArray arrayWithCapacity:keyframeCount];
+    
+    CGPoint fromTranslation = CGPointMake(fromTransform.tx, fromTransform.ty);
+    CGPoint toTranslation = CGPointMake(toTransform.tx, toTransform.ty);
+    
+    CGFloat fromScale = hypot(fromTransform.a, fromTransform.c);
+    CGFloat toScale = hypot(toTransform.a, toTransform.c);
+    
+    CGFloat fromRotation = atan2(fromTransform.c, fromTransform.a);
+    CGFloat toRotation = atan2(toTransform.c, toTransform.a);
+    
+    CGFloat deltaRotation = toRotation - fromRotation;
+
+    if (deltaRotation < -M_PI)
+        deltaRotation += (2 * M_PI);
+    else if (deltaRotation > M_PI)
+        deltaRotation -= (2 * M_PI);
+
+    CGFloat t = 0.0;
+    CGFloat dt = 1.0 / (keyframeCount - 1);
+    for(size_t frame = 0; frame < keyframeCount; ++frame, t += dt)
+    {
+        CGFloat interp = function(t);
+        
+        CGFloat translateX = fromTranslation.x + interp * (toTranslation.x - fromTranslation.x);
+        CGFloat translateY = fromTranslation.y + interp * (toTranslation.y - fromTranslation.y);
+        
+        CGFloat scale = fromScale + interp * (toScale - fromScale);
+        
+        CGFloat rotate = fromRotation + interp * deltaRotation;
+        
+        CGAffineTransform affineTransform = CGAffineTransformMake(scale * cos(rotate), -scale * sin(rotate),
+                                                                  scale * sin(rotate), scale * cos(rotate),
+                                                                  translateX, translateY);
+        
+        CATransform3D transform = CATransform3DMakeAffineTransform(affineTransform);
+
+        [values addObject:[NSValue valueWithCATransform3D:transform]];
+    }
+
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:path];
+    [animation setValues:values];
+    return animation;
+}
+
++ (instancetype)animationWithKeyPath:(NSString *)path
+                  function:(AHEasingFunction)function
+             fromTransform:(CGAffineTransform)fromTransform
+               toTransform:(CGAffineTransform)toTransform
+{
+    return [self animationWithKeyPath:path
+                             function:function
+                        fromTransform:fromTransform
+                          toTransform:toTransform
+                        keyframeCount:AHEasingDefaultKeyframeCount];
 }
 
 @end
