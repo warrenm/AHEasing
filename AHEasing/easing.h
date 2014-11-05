@@ -23,6 +23,10 @@
 #define AHFloat float
 #endif
 
+#if defined __cplusplus
+extern "C" {
+#endif
+
 typedef AHFloat (*AHEasingFunction)(AHFloat);
 
 // Linear interpolation (no easing)
@@ -77,5 +81,9 @@ AHFloat BackEaseInOut(AHFloat p);
 AHFloat BounceEaseIn(AHFloat p);
 AHFloat BounceEaseOut(AHFloat p);
 AHFloat BounceEaseInOut(AHFloat p);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
