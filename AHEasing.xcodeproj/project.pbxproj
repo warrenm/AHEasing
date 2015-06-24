@@ -264,6 +264,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Auerhaus Development, LLC";
+				TargetAttributes = {
+					8045279116A6318B001DB532 = {
+						DevelopmentTeam = 5XU8G72NQS;
+					};
+				};
 			};
 			buildConfigurationList = 806EB7E5138F91A700E2D4A7 /* Build configuration list for PBXProject "AHEasing" */;
 			compatibilityVersion = "Xcode 3.2";
