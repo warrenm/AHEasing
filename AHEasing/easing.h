@@ -18,10 +18,11 @@
 #endif
 
 #ifdef AH_EASING_USE_DBL_PRECIS
-#define AHFloat double
+#define AH_FLOAT_TYPE double
 #else
-#define AHFloat float
+#define AH_FLOAT_TYPE float
 #endif
+typedef AH_FLOAT_TYPE AHFloat;
 
 #if defined __cplusplus
 extern "C" {
