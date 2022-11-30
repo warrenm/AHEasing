@@ -2,6 +2,7 @@
 //  CAKeyframeAnimation+AHEasing.h
 //
 //  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Playground View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PlaygroundViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snx-5l-dbU" userLabel="Tappable Area" customClass="EasingFunctionGraphView">
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="359"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8kF-Ku-2g2" userLabel="Curve Selection">
+                                        <rect key="frame" x="8" y="289" width="836" height="32"/>
+                                        <segments>
+                                            <segment title="Linear"/>
+                                            <segment title="Quad"/>
+                                            <segment title="Cubic"/>
+                                            <segment title="Quart"/>
+                                            <segment title="Quint"/>
+                                            <segment title="Sine"/>
+                                            <segment title="Circ"/>
+                                            <segment title="Exp"/>
+                                            <segment title="Elastic"/>
+                                            <segment title="Back"/>
+                                            <segment title="Bounce"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="curveSelectionChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="6qe-tx-Oef"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wn1-HB-saW" userLabel="Easing Selection">
+                                        <rect key="frame" x="269.66666666666669" y="328" width="313.00000000000006" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="313" id="PmW-RV-mLk"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Ease In"/>
+                                            <segment title="Ease Out"/>
+                                            <segment title="Ease In-Out"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="easingSelectionChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="zAH-w4-6RX"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOu-ZI-gsR" userLabel="Stalker">
+                                        <rect key="frame" x="197" y="169" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75" green="0.75" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wn1-HB-saW" secondAttribute="bottom" id="IOp-rn-shg"/>
+                                    <constraint firstItem="wn1-HB-saW" firstAttribute="top" secondItem="8kF-Ku-2g2" secondAttribute="bottom" constant="8" symbolic="YES" id="Sah-Ax-TWb"/>
+                                    <constraint firstItem="wn1-HB-saW" firstAttribute="centerX" secondItem="snx-5l-dbU" secondAttribute="centerX" id="WpZ-6f-Nxz"/>
+                                    <constraint firstItem="8kF-Ku-2g2" firstAttribute="leading" secondItem="snx-5l-dbU" secondAttribute="leading" constant="8" id="ZqB-Hh-Hxo"/>
+                                    <constraint firstAttribute="trailing" secondItem="8kF-Ku-2g2" secondAttribute="trailing" constant="8" id="t0H-QX-s18"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.75458168496890943" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="snx-5l-dbU" secondAttribute="trailing" id="6UM-AA-Nz3"/>
+                            <constraint firstItem="snx-5l-dbU" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="UNU-ak-VVw"/>
+                            <constraint firstItem="snx-5l-dbU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="d2j-BG-NWR"/>
+                            <constraint firstItem="snx-5l-dbU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ff3-wG-K3K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boid" destination="TOu-ZI-gsR" id="vJr-be-YDV"/>
+                        <outlet property="curveSegmentedControl" destination="8kF-Ku-2g2" id="m4D-MG-fFJ"/>
+                        <outlet property="easingSegmentedControl" destination="wn1-HB-saW" id="ZTm-Os-AQu"/>
+                        <outlet property="graphView" destination="snx-5l-dbU" id="zEM-ri-adB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.98591549295776" y="-28.244274809160306"/>
+        </scene>
+    </scenes>
+</document>

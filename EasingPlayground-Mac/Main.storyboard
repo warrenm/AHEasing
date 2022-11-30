@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="D6a-mc-8B2">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="uKL-jY-c9p">
+            <objects>
+                <application id="WDP-c6-THQ" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="NJa-Uz-cMj">
+                        <items>
+                            <menuItem title="AHEasing Playground" id="PtH-V1-Sbv">
+                                <menu key="submenu" title="AHEasing Playground" systemMenu="apple" id="5xs-xS-5Ka">
+                                    <items>
+                                        <menuItem title="Services" id="ZTI-KI-QWm">
+                                            <menu key="submenu" title="Services" systemMenu="services" id="GyM-Bg-8lT"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="cV0-bC-xuz">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Hide" keyEquivalent="h" id="QWj-X9-H2K">
+                                            <connections>
+                                                <action selector="hide:" target="dit-L9-DEY" id="9oH-hb-XKg"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="f21-DW-j95">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="dit-L9-DEY" id="i0N-QX-1wp"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="h77-7x-VZ6"/>
+                                        <menuItem isSeparatorItem="YES" id="1eV-pQ-nM0">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Quit" keyEquivalent="q" id="Cvf-bP-VxI">
+                                            <connections>
+                                                <action selector="terminate:" target="dit-L9-DEY" id="cy6-qw-fRv"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="File" id="Dto-MQ-Awb">
+                                <menu key="submenu" title="File" id="fbU-vQ-11A">
+                                    <items>
+                                        <menuItem title="Close" keyEquivalent="w" id="hum-Vw-EZF">
+                                            <connections>
+                                                <action selector="performClose:" target="dit-L9-DEY" id="bMw-Dk-DGc"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="hyJ-x2-sPd">
+                                <menu key="submenu" title="Window" systemMenu="window" id="ayz-Ds-bh3">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="Hsr-CJ-r5h">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="dit-L9-DEY" id="neW-b4-xub"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="f1C-Iq-ffD">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Bring All to Front" id="Vzw-6j-u9W">
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="dit-L9-DEY" id="QZB-Kt-ocn"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="k66-cX-8DA">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="Hhc-57-23e">
+                                    <items>
+                                        <menuItem title="Help" keyEquivalent="?" id="Bcw-mj-3Ge"/>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="5sP-W1-Owl" id="wxP-Ik-KkS"/>
+                    </connections>
+                </application>
+                <customObject id="dit-L9-DEY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="5sP-W1-Owl" userLabel="App Delegate" customClass="AppDelegate"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="-575"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="VXE-W5-MFk">
+            <objects>
+                <windowController id="D6a-mc-8B2" sceneMemberID="viewController">
+                    <window key="window" title="AHEasing Playground" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="uhD-N0-bdL">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="800" height="600"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
+                        <view key="contentView" id="Ht7-mM-Lx5">
+                            <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="D6a-mc-8B2" id="cwO-8X-2m4"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="k08-in-pLY" kind="relationship" relationship="window.shadowedContentViewController" id="cZK-7Q-U8O"/>
+                    </connections>
+                </windowController>
+                <customObject id="1GR-WM-MxH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="-179"/>
+        </scene>
+        <!--PlaygroundNS View Controller-->
+        <scene sceneID="bh4-xa-kA5">
+            <objects>
+                <viewController id="k08-in-pLY" customClass="PlaygroundNSViewController" sceneMemberID="viewController">
+                    <customView key="view" id="kNE-dJ-Raa" customClass="EasingFunctionGraphView">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BDb-NV-hbp">
+                                <rect key="frame" x="18" y="49" width="764" height="24"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="QYM-Rv-EbR">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="Linear" selected="YES"/>
+                                        <segment label="Quad" tag="1"/>
+                                        <segment label="Cubic"/>
+                                        <segment label="Quartic"/>
+                                        <segment label="Quintic"/>
+                                        <segment label="Sin"/>
+                                        <segment label="Circ"/>
+                                        <segment label="Exp"/>
+                                        <segment label="Elast"/>
+                                        <segment label="Back"/>
+                                        <segment label="Bounce"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="curveSelectionChanged:" target="k08-in-pLY" id="aAt-FM-shv"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rxu-hH-8K7">
+                                <rect key="frame" x="280" y="19" width="240" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="ar2-fK-Wlq"/>
+                                </constraints>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="hMd-lV-i3q">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="Ease In" selected="YES"/>
+                                        <segment label="Ease Out" tag="1"/>
+                                        <segment label="Ease In Out"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="easingSelectionChanged:" target="k08-in-pLY" id="vdF-TE-Eqj"/>
+                                </connections>
+                            </segmentedControl>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGY-39-DbZ">
+                                <rect key="frame" x="126" y="284" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="BDb-NV-hbp" firstAttribute="leading" secondItem="kNE-dJ-Raa" secondAttribute="leading" constant="20" symbolic="YES" id="5D1-9L-Fhi"/>
+                            <constraint firstAttribute="trailing" secondItem="BDb-NV-hbp" secondAttribute="trailing" constant="20" symbolic="YES" id="POm-VF-6jN"/>
+                            <constraint firstItem="Rxu-hH-8K7" firstAttribute="top" secondItem="BDb-NV-hbp" secondAttribute="bottom" constant="8" symbolic="YES" id="XYb-8b-fdE"/>
+                            <constraint firstItem="Rxu-hH-8K7" firstAttribute="centerX" secondItem="kNE-dJ-Raa" secondAttribute="centerX" id="b2Y-45-8cy"/>
+                            <constraint firstAttribute="bottom" secondItem="Rxu-hH-8K7" secondAttribute="bottom" constant="20" symbolic="YES" id="viV-lW-Wgl"/>
+                        </constraints>
+                    </customView>
+                    <connections>
+                        <outlet property="boid" destination="SGY-39-DbZ" id="guq-vD-Oqi"/>
+                        <outlet property="graphView" destination="kNE-dJ-Raa" id="68f-Wm-ocx"/>
+                    </connections>
+                </viewController>
+                <customObject id="m88-sG-8s2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="611"/>
+        </scene>
+    </scenes>
+</document>

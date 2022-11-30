@@ -1,8 +1,8 @@
 //
 //  EasingFunctionGraphView.h
-//  AHEasing
 //
 //  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -16,7 +16,7 @@
 #if TARGET_OS_IPHONE
 
 @interface EasingFunctionGraphView : UIView
-@property(nonatomic, strong) IBOutlet UIViewController *viewController; // Unused. Only here to void further preprocessor directives in the .m file.
+@property(nonatomic, strong) IBOutlet UIViewController *viewController; // Unused
 
 #else
 

@@ -3,6 +3,7 @@
 //  EasingPlayground-iOS
 //
 //  Copyright (c) 2013, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -18,9 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.window.rootViewController = [[PlaygroundViewController alloc] initWithNibName:@"PlaygroundView" bundle:nil];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 

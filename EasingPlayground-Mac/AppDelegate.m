@@ -3,6 +3,7 @@
 //  EasingPlayground-Mac
 //
 //  Copyright (c) 2013, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -12,15 +13,11 @@
 //
 
 #import "AppDelegate.h"
-#import "PlaygroundNSViewController.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	self.viewController = [[PlaygroundNSViewController alloc] initWithNibName:@"PlaygroundView" bundle:nil];
-	[self.window.contentView addSubview:self.viewController.view];
-	
 }
 
 @end

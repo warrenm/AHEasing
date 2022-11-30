@@ -2,6 +2,7 @@
 //  PlaygroundViewController.m
 //
 //  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -13,6 +14,13 @@
 #import "PlaygroundViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "CAKeyframeAnimation+AHEasing.h"
+
+@interface PlaygroundViewController () <CAAnimationDelegate> {
+    BOOL animating;
+    NSInteger currentCurve, currentEasing;
+    AHEasingFunction currentFunction;
+}
+@end
 
 @implementation PlaygroundViewController
 
@@ -28,10 +36,10 @@
 	[self.graphView addGestureRecognizer:tapRecognizer];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
-}
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+//}
 
 #pragma mark - Actions
 
@@ -39,7 +47,7 @@
 {
 	if([recognizer state] == UIGestureRecognizerStateEnded && !animating)
 	{
-		CGPoint targetCenter = [recognizer locationInView:self.view];
+		CGPoint targetCenter = [recognizer locationInView:self.graphView];
 		
 		CALayer *layer= [self.boid layer];
 		[CATransaction begin];

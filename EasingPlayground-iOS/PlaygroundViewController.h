@@ -2,6 +2,7 @@
 //  PlaygroundViewController.h
 //
 //  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -15,16 +16,12 @@
 #import "EasingFunctionGraphView.h"
 #import "EasingDeclarations.h"
 
-@interface PlaygroundViewController : UIViewController {
-	BOOL animating;
-	NSInteger currentCurve, currentEasing;
-	AHEasingFunction currentFunction;
-}
+@interface PlaygroundViewController : UIViewController 
 
 @property(nonatomic, strong) IBOutlet UIView *boid;
 @property(nonatomic, strong) IBOutlet EasingFunctionGraphView *graphView;
-@property (nonatomic, strong) IBOutlet UISegmentedControl *curveSegmentedControl;
-@property (nonatomic, strong) IBOutlet UISegmentedControl *easingSegmentedControl;
+@property(nonatomic, strong) IBOutlet UISegmentedControl *curveSegmentedControl;
+@property(nonatomic, strong) IBOutlet UISegmentedControl *easingSegmentedControl;
 
 - (IBAction)curveSelectionChanged:(id)sender;
 - (IBAction)easingSelectionChanged:(id)sender;

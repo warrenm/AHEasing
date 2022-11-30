@@ -1,22 +1,44 @@
 //
 //  PlaygroundNSViewController.m
-//  AHEasing
+//  EasingPlayground-Mac
 //
-//  Created by Warren Moore on 1/15/13.
-//  Copyright (c) 2013 Auerhaus Development, LLC. All rights reserved.
+//  Copyright (c) 2013, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
+//
+//  This program is free software. It comes without any warranty, to
+//  the extent permitted by applicable law. You can redistribute it
+//  and/or modify it under the terms of the Do What The Fuck You Want
+//  To Public License, Version 2, as published by Sam Hocevar. See
+//  http://sam.zoy.org/wtfpl/COPYING for more details.
 //
 
 #import "PlaygroundNSViewController.h"
+
+@interface PlaygroundNSViewController () <CAAnimationDelegate> {
+    BOOL _animating;
+    NSInteger _currentCurve, _currentEasing;
+    AHEasingFunction _currentFunction;
+}
+@end
 
 @implementation PlaygroundNSViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]))
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])
 	{
-		currentFunction = LinearInterpolation;
+		_currentFunction = LinearInterpolation;
     }
     
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if (self = [super initWithCoder:coder])
+    {
+        _currentFunction = LinearInterpolation;
+    }
+
     return self;
 }
 
@@ -35,18 +57,19 @@
 
 - (void)mouseUp:(NSEvent *)theEvent
 {
-	if(!animating)
+	if(!_animating)
 	{
 		NSPoint point = [self.graphView convertPoint:[theEvent locationInWindow] fromView:nil];
+        CGSize size = self.boid.bounds.size;
 
-		CGPoint targetOrigin = NSPointToCGPoint(point);
+		CGPoint targetOrigin = CGPointMake(point.x - size.width * 0.5, point.y - size.height * 0.5);
 
 		CALayer *layer = [self.boid layer];
 		[CATransaction begin];
-		[CATransaction setValue:[NSNumber numberWithFloat:0.750f] forKey:kCATransactionAnimationDuration];
+        [CATransaction setAnimationDuration:0.75];
 
 		CAAnimation *chase = [CAKeyframeAnimation animationWithKeyPath:@"position"
-															  function:currentFunction
+															  function:_currentFunction
 															 fromPoint:self.boid.frame.origin
 															   toPoint:targetOrigin];
 		[chase setDelegate:self];
@@ -56,7 +79,7 @@
 
 		[self.boid setFrameOrigin:targetOrigin];
 
-		animating = YES;
+		_animating = YES;
 
 		[self.graphView setNeedsDisplay:YES];
 	}
@@ -64,62 +87,62 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-	animating = NO;
+	_animating = NO;
 }
 
 - (void)configureEasingFunction
 {
-	switch(currentCurve)
+	switch(_currentCurve)
 	{
 		case CurveTypeLinear:
-			currentFunction = LinearInterpolation;
+			_currentFunction = LinearInterpolation;
 			break;
 		case CurveTypeQuadratic:
-			currentFunction = (currentEasing == EaseIn) ? QuadraticEaseIn : (currentEasing == EaseOut) ? QuadraticEaseOut : QuadraticEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? QuadraticEaseIn : (_currentEasing == EaseOut) ? QuadraticEaseOut : QuadraticEaseInOut;
 			break;
 		case CurveTypeCubic:
-			currentFunction = (currentEasing == EaseIn) ? CubicEaseIn : (currentEasing == EaseOut) ? CubicEaseOut : CubicEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? CubicEaseIn : (_currentEasing == EaseOut) ? CubicEaseOut : CubicEaseInOut;
 			break;
 		case CurveTypeQuartic:
-			currentFunction = (currentEasing == EaseIn) ? QuarticEaseIn : (currentEasing == EaseOut) ? QuarticEaseOut : QuarticEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? QuarticEaseIn : (_currentEasing == EaseOut) ? QuarticEaseOut : QuarticEaseInOut;
 			break;
 		case CurveTypeQuintic:
-			currentFunction = (currentEasing == EaseIn) ? QuinticEaseIn : (currentEasing == EaseOut) ? QuinticEaseOut : QuinticEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? QuinticEaseIn : (_currentEasing == EaseOut) ? QuinticEaseOut : QuinticEaseInOut;
 			break;
 		case CurveTypeSine:
-			currentFunction = (currentEasing == EaseIn) ? SineEaseIn : (currentEasing == EaseOut) ? SineEaseOut : SineEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? SineEaseIn : (_currentEasing == EaseOut) ? SineEaseOut : SineEaseInOut;
 			break;
 		case CurveTypeCircular:
-			currentFunction = (currentEasing == EaseIn) ? CircularEaseIn : (currentEasing == EaseOut) ? CircularEaseOut : CircularEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? CircularEaseIn : (_currentEasing == EaseOut) ? CircularEaseOut : CircularEaseInOut;
 			break;
 		case CurveTypeExpo:
-			currentFunction = (currentEasing == EaseIn) ? ExponentialEaseIn : (currentEasing == EaseOut) ? ExponentialEaseOut : ExponentialEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? ExponentialEaseIn : (_currentEasing == EaseOut) ? ExponentialEaseOut : ExponentialEaseInOut;
 			break;
 		case CurveTypeElastic:
-			currentFunction = (currentEasing == EaseIn) ? ElasticEaseIn : (currentEasing == EaseOut) ? ElasticEaseOut : ElasticEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? ElasticEaseIn : (_currentEasing == EaseOut) ? ElasticEaseOut : ElasticEaseInOut;
 			break;
 		case CurveTypeBack:
-			currentFunction = (currentEasing == EaseIn) ? BackEaseIn : (currentEasing == EaseOut) ? BackEaseOut : BackEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? BackEaseIn : (_currentEasing == EaseOut) ? BackEaseOut : BackEaseInOut;
 			break;
 		case CurveTypeBounce:
-			currentFunction = (currentEasing == EaseIn) ? BounceEaseIn : (currentEasing == EaseOut) ? BounceEaseOut : BounceEaseInOut;
+			_currentFunction = (_currentEasing == EaseIn) ? BounceEaseIn : (_currentEasing == EaseOut) ? BounceEaseOut : BounceEaseInOut;
 			break;
 	}
 
-	[self.graphView setEasingFunction:currentFunction];
+    [self.graphView setEasingFunction:_currentFunction];
 	[self.graphView setNeedsDisplay:YES];
 }
 
 - (IBAction)curveSelectionChanged:(id)sender
 {
-	currentCurve = [sender selectedSegment];
+	_currentCurve = [sender selectedSegment];
 
 	[self configureEasingFunction];
 }
 
 - (IBAction)easingSelectionChanged:(id)sender
 {
-	currentEasing = [sender selectedSegment];
+	_currentEasing = [sender selectedSegment];
 
 	[self configureEasingFunction];
 }

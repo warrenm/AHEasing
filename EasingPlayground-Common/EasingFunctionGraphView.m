@@ -1,8 +1,8 @@
 //
 //  EasingFunctionGraphView.m
-//  AHEasing
 //
 //  Copyright (c) 2011, Auerhaus Development, LLC
+//  Copyright (c) 2022, Warren Moore
 //
 //  This program is free software. It comes without any warranty, to
 //  the extent permitted by applicable law. You can redistribute it
@@ -86,7 +86,7 @@
 	CGColorRef lightGray = [UIColor lightGrayColor].CGColor;
 	CGColorRef black = [UIColor blackColor].CGColor;
 #else
-	CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
+	CGContextRef context = [[NSGraphicsContext currentContext] CGContext];
 	CGContextScaleCTM(context, 1, -1);
 	CGContextTranslateCTM(context, 0, -rect.size.height);
 	CGColorRef lightGray = CGColorCreateGenericRGB(0.667, 0.667, 0.667, 1.0);
